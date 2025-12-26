@@ -1,5 +1,5 @@
 <script setup>
-import imageUrl from '@/assets/PediatriCover.jpg'
+import imageUrl from '@/assets/PediatriFront.jpg'
 </script>
 
 <template>
