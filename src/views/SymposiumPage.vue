@@ -47,6 +47,7 @@
       </base-paragraph>
     </base-card>
     <base-card>
+      <img :src="obrakanje2" class="float-image" />
       <base-paragraph>
         <b>{{ t('symposiumPage.p12') }}</b>
       </base-paragraph>
@@ -87,6 +88,7 @@ import BaseContainer from "@/components/BaseContainer.vue";
 import BaseParagraph from "@/components/BaseParagraph.vue";
 import SmallCard from "@/components/SmallCard.vue";
 import {useI18n} from "vue-i18n";
+import obrakanje2 from "@/assets/obrakanje2.jpg";
 
 const { t } = useI18n();
 </script>
@@ -96,10 +98,24 @@ const { t } = useI18n();
   font-size: 1.8rem;
 }
 
+.float-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 200px; /* Adjust size as needed, or let it be natural but likely strictly bounded */
+  border-radius: 8px; /* Optional but looks nice */
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 0.7rem;
   }
 
+  .float-image {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
 </style>

@@ -205,7 +205,7 @@ const logoWidth = computed(() => {
 
 <style scoped>
 .app-bar {
-  background: linear-gradient(135deg, #266f72 0%, #00c3d2 100%) !important;
+  background: linear-gradient(135deg, #165557 0%, #01c0ce 100%) !important;
 }
 
 .logo {

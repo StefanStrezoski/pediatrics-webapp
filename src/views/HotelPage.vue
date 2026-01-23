@@ -112,7 +112,7 @@ const { t, tm, rt } = useI18n();
         </v-col>
       </v-row>
       <base-paragraph class="text-center mb-0">
-        <a href="https://zplrm2026.mk/" target="_blank" class="text-decoration-none text-lg-h4 font-weight-bold"><span class="text-red">www.zplrm2026.mk</span></a>
+        <a href="https://congress2026.mk/" target="_blank" class="text-decoration-none text-lg-h4 font-weight-bold"><span class="text-red">www.congress2026.mk</span></a>
       </base-paragraph>
     </base-card>
   </base-container>

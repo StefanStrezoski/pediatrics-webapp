@@ -31,7 +31,6 @@ const categoryOptions = [
   { title: '2', value: 2 },
   { title: '3', value: 3 },
   { title: '4', value: 4 },
-  { title: '5', value: 5 },
 ];
 
 const validRule = [value => !!value || t('feesPage.required')];
@@ -64,7 +63,7 @@ async function handleSubmit() {
 
     let fileName = null;
 
-    if (form.value.category === 4) {
+    if (form.value.category === 3) {
       if (!file.value) {
         message.value = t('feesPage.selectFile');
         loading.value = false;
@@ -72,10 +71,10 @@ async function handleSubmit() {
       }
 
       const fileExtension = file.value.name.match(/\.[^.]+$/)[0].toLowerCase();
-      fileName = `documents/${Date.now()}_${uuidv4()}${fileExtension}`;
+      fileName = `pediatrics-documents/${Date.now()}_${uuidv4()}${fileExtension}`;
 
       const { error: uploadError } = await supabase.storage
-        .from('abstracts')
+        .from('projects')
         .upload(fileName, file.value);
 
       if (uploadError) {
@@ -86,7 +85,7 @@ async function handleSubmit() {
 
     }
 
-    const { error: dbError } = await supabase.from('document_submissions').insert({
+    const { error: dbError } = await supabase.from('document_submissions_pediatrics').insert({
       name: form.value.name,
       email: form.value.email,
       phone: form.value.phone,
