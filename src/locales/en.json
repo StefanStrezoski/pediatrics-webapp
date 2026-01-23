@@ -1,1 +1,209 @@
-{}
+{
+  "tabs": {
+    "about": "About Event",
+    "symposium": "Congress",
+    "abstracts": "Abstracts",
+    "fees": "Registration",
+    "accommodations": "Accommodation"
+  },
+  "navtitle": {
+    "one": "Multidisciplinary approach for healthy childhood -",
+    "two": "Our common care from day one"
+  },
+  "infoSection": {
+    "l1": "08.05.-10.05.2026",
+    "l2": "Hotel Drim Struga"
+  },
+  "location": "Location",
+  "intro": "Dear colleagues, dear friends and collaborators,",
+  "underConstruction": "UNDER CONSTRUCTION",
+  "required": "Required field",
+  "errorMsg": "Fill in all required fields",
+  "selectFile": "Select file",
+  "symposiumPage": {
+    "p1": "It is my exceptional honor on behalf of the </br> <b>Pediatric Association for Gastroenterology, Hepatology, Nutrition, Clinical Immunology and Allergology</b> to invite you to the <b>Congress with international participation organized by PAGNIA and ZNRM</b> titled <b>“Multidisciplinary approach for healthy childhood - our common care from day one”</b> which will be held from <b>May 8th to 10th, 2026 at Hotel Drim in Struga.</b>",
+    "p2": "The creation of this pediatric association emerged from everyday clinical practice and the connection of important mechanisms of disease occurrence and their treatment.",
+    "l1B": "Pharmaceutical care of pediatric patients",
+    "l1": "- contribution to pharmacotherapy management of acute and chronic conditions, rational drug use and prevention of adverse effects.",
+    "l2B": "Pharmaceutical care of geriatric patients",
+    "l2": "- support in optimization of therapeutic strategies, management of polypharmacy, individualization of therapy and monitoring of drugs with narrow therapeutic index.",
+    "l3B": "Dietetics and dietotherapy",
+    "l3": "- part of the holistic approach in treatment and prevention of diseases and the pharmacist's role in health support and improvement of health outcomes.",
+    "p3": "Pediatric gastroenterology, hepatology and nutrition are extremely important areas for creating a healthy individual in society. Immune primacy and the importance of the gastrointestinal tract is closely related to clinical immunology and allergology.",
+    "p4": "The Congress is intended for residents, pediatricians, subspecialists, dietitians, young doctors, primary care physicians, family medicine doctors, nurses and related branches and specialties whose daily activity is deeply intertwined with them.",
+    "p5": "Main topics of the congress are: various diseases from an immunological aspect, gastrointestinal and hepatological diseases, nutrition of healthy and sick children, allergology, latest recommendations in diagnosis and treatment from a large number of specialties, modern diagnostics and therapy, including protocols, personalized medicine and innovations.",
+    "p6": "The Congress is a place where colleagues can personally exchange experiences on the latest scientific and professional achievements from various fields.",
+    "p7": "The Roman philosopher Seneca said: <b><i>“It is better to learn something unnecessary than to learn nothing”.</i></b> ",
+    "p8": "The pleasure will be greater if we create history together, merging new ideas for an exciting future and unforgettable memories of shared intellectual and social friendship.",
+    "p9": "Prof. Dr. Sonja Bojadzieva",
+    "p10": "President of the Pediatric Association for Gastroenterology, Hepatology,",
+    "p11": "Nutrition, Clinical Immunology and Allergology",
+    "p12": "Dear colleagues, collaborators and friends",
+    "p13": "It is with great pleasure, on behalf of",
+    "p14": "<b>The Association of Neonatologists of R. Macedonia</b>, the scientific and organizational board, that I announce the holding of the <b>Congress with international participation organized by PAGNIA and ZNRM titled “Multidisciplinary approach for healthy childhood - our common care from day one”</b> which will be held from <b>08-10.05.2026 at Hotel Drim - Struga</b>.",
+    "p15": "Top experts from our country, the region and Europe will take part in the congress, presenting the latest knowledge as well as their professional experiences through a rich scientific program filled with plenary lectures and professional workshops.",
+    "p16": "New achievements in the care and treatment of newborns are always a huge challenge for neonatologists, pediatricians, family doctors and all other related specialties who are in any way involved in the care of healthy childhood from day one.",
+    "p17": "The Congress will be an opportunity to exchange experiences and ideas, acquire new knowledge, be informed about novelties in therapy and improve one's own capabilities in providing the best health care for newborns.",
+    "p18": "Therefore, we expect you to contribute with your presence and constructive discussions to the successful realization of the planned activities, as well as establishing new professional contacts and friendships.",
+    "p19": "Regards,",
+    "p20": "Prof. Dr. Silvana Naunova Timovska",
+    "p21": "President of the Association of Neonatologists of R. Macedonia"
+  },
+  "abstractPage": {
+    "title": "ABSTRACT SUBMISSION",
+    "submission": {
+      "text": "Abstract submission is done electronically by sending an email to the following <a href='mailto:gnaapstrakti2@gmail.com' class='text-decoration-none'>link</a>, using the attached form from the website:",
+      "link": "<b><a href='https://congress2026.mk' class='text-decoration-none' target='_blank'>www.congress2026.mk</a></b>"
+    },
+    "requirements": {
+      "font": "Abstracts should be written in <b>Times New Roman</b> font with <b>12</b> font size, with <b>single spacing</b> and in <b>A4 format.</b>",
+      "content": "The abstract should contain: <b>title, names and surnames of the authors</b> (underline the presenter), <b>Institution they come from,</b> and the content of the abstract should be <b>min. 200 and max. 300 words with at most 5 keywords.</b>",
+      "structure": "Abstracts should be as concise as possible and it is recommended that they be conceived with an introduction and objectives, methodology (if applicable), results and discussion, conclusion and references (at most two cited references, <b>Harvard style</b>)",
+      "language": "<b>Abstracts should be written in English.</b>",
+      "example": "<b>Attached is an example of a correctly submitted abstract (<a href='/files/AbsTemp.docx' download>link to example</a>).</b>"
+    },
+    "process": {
+      "typeSelection": "When submitting abstracts, the author should choose whether they want an oral or poster presentation.",
+      "scientificBoardDesc": "After reviewing the abstracts, <b>the Scientific Board reserves the right to transfer a certain abstract from oral to poster presentation or vice versa.</b>"
+    },
+    "presentation": {
+      "oral": "Oral presentations can be in the native language, but presentations <b>MUST BE IN ENGLISH</b> - written in PowerPoint, in 16:9 format).",
+      "poster": "Poster presentations will be performed exclusively electronically on LCD screens and therefore must be made in <b>16:9 ratio and resolution min. 300 dpi (.pdf format).</b> For all accepted <b>ABSTRACTS</b>, the Scientific Board will make a decision."
+    },
+    "deadlines": {
+      "submission": "<b>DEADLINE FOR ABSTRACT SUBMISSION: <span class='text-red'>27.03.2026</span></b>",
+      "confirmation": "<b>DEADLINE FOR CONFIRMATION OF ACCEPTED ABSTRACTS: <span class='text-red'>05.04.2026</span></b>"
+    },
+    "notes": {
+      "accreditation": "<b><span class='text-red'>NOTE:</span>Accepted oral and poster presentations provide appropriate points from the event accreditation, <span class='text-decoration-underline'>BUT ONLY FOR THE PRESENTER</span></b>",
+      "publication": "<b>Only accepted abstracts will be published in the Book of Abstracts</b> <br/> <b>FOR WHICH THE PRESENTER HAS PAID/SECURED REGISTRATION FEE.</b>"
+    },
+    "expired": "The deadline for abstract submission has expired! Thank you for your participation!"
+  },
+  "presentationPage": {
+    "successMsg": "Successfully submitted!",
+    "unexpectedError": "Error submitting.",
+    "title": "Submission of oral and poster presentations",
+    "nameLabel": "Name and surname",
+    "emailLabel": "E-mail",
+    "institutionLabel": "Institution",
+    "titleLabel": "Presentation title",
+    "uploadLabel": "Upload presentation(.ppt,.pptx,.doc,.docx,.pdf)",
+    "submitLabel": "Submit"
+  },
+  "feesPage": {
+    "title": "PARTICIPANT REGISTRATION FEES",
+    "table": {
+      "headers": {
+        "category": "Category",
+        "participantType": "Participant Type",
+        "early": "PAYMENT UNTIL 19.04.2026",
+        "mid": "PAYMENT FROM 20.04.2026",
+        "late": "PAYMENT FROM 01.05.2026"
+      },
+      "row1": {
+        "id": "1",
+        "type": "Members of PAGNIA and NEONATO",
+        "price1": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>",
+        "price2": "9.920 MKD <br/> 160 € <br/> <span class='text-red font-weight-bold'>(136 € + 18% VAT)</span>",
+        "price3": "11.160 MKD <br/> 180 € <br/> <span class='text-red font-weight-bold'>(153 € + 18% VAT)</span>"
+      },
+      "row2": {
+        "id": "2",
+        "type": "Other PARTICIPANTS",
+        "price1": "10.230 MKD <br/> 165 € <br/> <span class='text-red font-weight-bold'>(140 € + 18% VAT)</span>",
+        "price2": "11.470 MKD <br/> 185 € <br/> <span class='text-red font-weight-bold'>(157 € + 18% VAT)</span>",
+        "price3": "12.710 MKD <br/> 205 € <br/> <span class='text-red font-weight-bold'>(174 € + 18% VAT)</span>"
+      },
+      "row3": {
+        "id": "3",
+        "type": "&#11088; Residents and students",
+        "price1": "6.820 MKD <br/> 110 € <br/> <span class='text-red font-weight-bold'>(93 € + 18% VAT)</span>",
+        "price2": "8.060 MKD <br/> 130 € <br/> <span class='text-red font-weight-bold'>(110 € + 18% VAT)</span>",
+        "price3": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>"
+      },
+      "row4": {
+        "id": "4",
+        "type": "&#11088;&#11088; Company representatives and other accompanying persons",
+        "price1": "6.820 MKD <br/> 110 € <br/> <span class='text-red font-weight-bold'>(93 € + 18% VAT)</span>",
+        "price2": "8.060 MKD <br/> 130 € <br/> <span class='text-red font-weight-bold'>(110 € + 18% VAT)</span>",
+        "price3": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>"
+      }
+    },
+    "info": {
+      "vat": "THE PRICE INCLUDES 18% VAT",
+      "calculation": "The price for each category, <span class='text-red'><br/> will be calculated according to the GIVEN DEADLINES IN THE PRICE LIST and the DAY OF PAYMENT. <br/> </span> REGISTRATION FOR THE CONGRESS INCLUDES:",
+      "includes": {
+        "col1": [
+          "Complete material and ID card",
+          "Attendance at all scientific sessions",
+          "Certificate with approved points from LKRMS"
+        ],
+        "col2": [
+          "Access to exhibition area",
+          "Attendance at opening ceremony",
+          "Attendance at coffee breaks and organized lunches"
+        ]
+      },
+      "dinner": "ATTENDANCE AT GALA DINNERS"
+    },
+    "notes": {
+      "students": "NOTE for category &#11088;: RESIDENTS AND STUDENTS MUST submit a Confirmation from the faculty that they are enrolled in current studies. Participants in this category receive an ID card, program and free entry to all lectures and other organized activities. These participants <br/> <span class='text-red'>RECEIVE A CERTIFICATE OF PARTICIPATION, BUT ARE NOT ENTITLED TO PRINTED MATERIALS.</span>",
+      "companies": "NOTE for category &#11088;&#11088;: Company representatives can only be employees of Companies PARTICIPATING in the event with a Sponsorship package or Stand. Other accompanying persons can only be spouses or close family members. Participants in this category receive a program and ID card for free entry to all lectures and other organized activities. These participants <br/> <span class='text-red'>DO NOT RECEIVE A CERTIFICATE OF PARTICIPATION AND PRINTED MATERIALS.</span>",
+      "hotel": "NOTE for category &#11088;&#11088;&#11088;: ALL PARTICIPANTS WHO <br/> <span class='text-red'>HAVE PAID REGISTRATION FEE, BUT ARE NOT STAYING AT HOTEL DRIM,</span> <br/> FOR ATTENDANCE AT GALA DINNERS <span class='text-red'> <br/> PAY IN ADVANCE 45 € PER PERSON, FOR EACH DINNER SEPARATELY.</span>",
+      "meals": "ALL PARTICIPANTS WHO <br/> <span class='text-red'>HAVE NOT PAID REGISTRATION FEE AND ARE NOT STAYING AT HOTEL DRIM,</span> <br/> FOR ATTENDANCE AT GALA DINNERS, LUNCHES, COCKTAILS AND/OR COFFEE BREAKS,<br/> <span class='text-red'>PAY IN ADVANCE 60 € PER PERSON, FOR EACH MEAL SEPARATELY.</span>"
+    },
+    "payment": "Registration fee payment is made to the agency GLOBAL NET ADV <br/> account: 200-0031649772-96 | Stopanska banka a.d. Skopje<br/> Payment purpose: “CONGRESS 08-10.05.2026“ <br/> <span class='text-red'>All payments must be completed before the start of the event!</span>",
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Phone number",
+      "institutionLabel": "Institution",
+      "categoryLabel": "Category",
+      "uploadLabel": "Upload document (JPG,JPEG)",
+      "submitLabel": "Submit"
+    },
+    "required": "This field is required",
+    "invalidPhone": "Please enter a valid phone number",
+    "errorMsg": "Please fill in all required fields correctly",
+    "selectFile": "Please select an image to upload",
+    "successMsg": "Your registration is successful!",
+    "unexpectedError": "An unexpected error occurred."
+  },
+  "accommodationPage": {
+    "title": "ACCOMMODATION",
+    "subtitle": "Hotel accommodation prices:",
+    "table": {
+      "headers": {
+        "hotel": "HOTEL",
+        "accommodation": "ACCOMMODATION",
+        "price": "PRICE PER PERSON/NIGHT for HALF BOARD"
+      },
+      "row1": {
+        "hotel": "Hotel DRIM &#11088;&#11088;&#11088;&#11088; <br/> Struga",
+        "type": "Single room",
+        "price": "80 eur"
+      },
+      "row2": {
+        "type": "Double room",
+        "price": "65 eur"
+      }
+    },
+    "note": "Accommodation in multi-bed rooms is also possible.",
+    "cancellation": {
+      "title": "<span class='text-red'>ACCOMMODATION CANCELLATION</span>",
+      "items": [
+        "For cancelled accommodation <span class='text-red'>until 15.04.2026, </span>funds <span class='text-red'>will be refunded in full</span> minus bank charges.",
+        "For cancelled accommodation <span class='text-red'>from 16.04.2026, </span>funds <span class='text-red'>will be refunded up to 50%</span> of paid funds, minus bank charges.",
+        "For cancelled accommodation <span class='text-red'>after 01.05.2026, NO REFUND OF PAID FUNDS WILL FOLLOW.</span>"
+      ]
+    },
+    "accessNote": "ACCESS TO ALL LOCATIONS IN HOTEL DRIM WILL BE ALLOWED ONLY FOR PERSONS WHO HAVE PAID REGISTRATION FEE FOR THE SYMPOSIUM.",
+    "contactInfo": "For all information and details regarding accommodation, transport, technical and logistical support, please contact the organizer and realizer agency:",
+    "contacts": {
+      "marjan": "Marjan Dimeski",
+      "lara": "Lara Velevska",
+      "andor": "and/or"
+    }
+  }
+}

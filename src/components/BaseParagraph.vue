@@ -13,7 +13,6 @@
   text-indent: 10px;
   font-size: 1.2rem;
   margin-bottom: 6px;
-  color: #134b7a;
   text-align: justify;
 }
 

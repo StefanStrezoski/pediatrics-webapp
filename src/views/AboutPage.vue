@@ -1,25 +1,25 @@
 <script setup lang="ts">
 
 import BaseContainer from "@/components/BaseContainer.vue";
-// import desktopImg from "@/assets/AboutImageD.png"
+import desktopImg from "@/assets/Pediatri Prva strana MK.jpg"
 // import mobileImg from "@/assets/AboutImageM.png"
 import {onMounted, onUnmounted, ref} from "vue";
 
 const currentImage = ref(desktopImg);
 
-const updateImage = () => {
-  const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
-  currentImage.value = isMobile ? mobileImg : desktopImg;
-};
-
-onMounted(() => {
-  updateImage(); // Set initial image
-  window.addEventListener('resize', updateImage); // Update on resize
-});
-
-onUnmounted(() => {
-  window.removeEventListener('resize', updateImage);
-});
+// const updateImage = () => {
+//   const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+//   currentImage.value = isMobile ? mobileImg : desktopImg;
+// };
+//
+// onMounted(() => {
+//   updateImage(); // Set initial image
+//   window.addEventListener('resize', updateImage); // Update on resize
+// });
+//
+// onUnmounted(() => {
+//   window.removeEventListener('resize', updateImage);
+// });
 </script>
 
 <template>
