@@ -9,6 +9,7 @@
       </base-paragraph>
     </small-card>
     <base-card class="mt-10 mb-5">
+      <img :src="obrakanje1" class="float-image" />
       <base-paragraph><b>{{ t('intro') }}</b></base-paragraph>
       <base-paragraph>
         <span v-html="t('symposiumPage.p1')"></span>
@@ -89,6 +90,7 @@ import BaseParagraph from "@/components/BaseParagraph.vue";
 import SmallCard from "@/components/SmallCard.vue";
 import {useI18n} from "vue-i18n";
 import obrakanje2 from "@/assets/obrakanje2.jpg";
+import obrakanje1 from "@/assets/obrakanje1.jpg";
 
 const { t } = useI18n();
 </script>
@@ -102,7 +104,10 @@ const { t } = useI18n();
   float: left;
   margin-right: 20px;
   margin-bottom: 10px;
-  width: 200px; /* Adjust size as needed, or let it be natural but likely strictly bounded */
+  width: 20%; /* Fluid width */
+  min-width: 150px; /* Minimum size to keep it readable */
+  max-width: 20%; /* Safety to strictly bound it */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional but looks nice */
 }
 
@@ -112,10 +117,11 @@ const { t } = useI18n();
   }
 
   .float-image {
-    width: 100%;
-    float: none;
-    margin-right: 0;
-    margin-bottom: 15px;
+    width: auto;
+    max-width: 40%; /* distinct from desktop, allow it to take up to 40% of mobile screen */
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
   }
 }
 </style>

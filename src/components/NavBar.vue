@@ -9,7 +9,8 @@
     <v-container class="d-flex justify-space-between align-center pl-0">
       <v-app-bar-title>
         <div class="d-flex align-center">
-          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block mr-2 ml-2"/>
+          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block mr-3 ml-2"/>
+          <span class="logo-text-big">{{ t('navtitle.congress') }}</span>
           <span class="logo-text">{{ t('navtitle.one') }}<br/>{{ t('navtitle.two') }}</span>
         </div>
       </v-app-bar-title>
@@ -212,6 +213,10 @@ const logoWidth = computed(() => {
   color: #FFFFFF !important;
 }
 
+.logo-text-big {
+  margin-right: 18px;
+}
+
 .v-slide-group {
   color: white !important;
 }
@@ -278,8 +283,13 @@ const logoWidth = computed(() => {
 }
 @media (max-width: 768px) {
   .logo-text {
-    font-size: 0.55rem;
-    line-height: 0.7rem;
+    font-size: 0.45rem;
+    line-height: 0.6rem;
+  }
+  .logo-text-big{
+    font-size: 0.35rem;
+    line-height: 0.4rem;
+    margin-right: 6px;
   }
   .location-link {
     display: none;

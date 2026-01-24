@@ -103,7 +103,7 @@ const { t } = useI18n();
       <base-paragraph>
         <span v-html="t('abstractPage.submission.text')"></span>
       </base-paragraph>
-      <base-paragraph class="text-center text-h4">
+      <base-paragraph class="text-center website-link">
         <span v-html="t('abstractPage.submission.link')"></span>
       </base-paragraph>
       <base-paragraph>
@@ -153,5 +153,14 @@ const { t } = useI18n();
 .title-card {
   background-color:  #26A69A;
   color: white;
+}
+.website-link {
+  color: #26A69A;
+  font-size: 36px;
+}
+@media (max-width: 768px) {
+  .website-link {
+    font-size: 24px;
+  }
 }
 </style>

@@ -7,6 +7,7 @@
     "accommodations": "Accommodation"
   },
   "navtitle": {
+    "congress": "CONGRESS",
     "one": "Multidisciplinary approach for healthy childhood -",
     "two": "Our common care from day one"
   },
@@ -52,7 +53,7 @@
   "abstractPage": {
     "title": "ABSTRACT SUBMISSION",
     "submission": {
-      "text": "Abstract submission is done electronically by sending an email to the following <a href='mailto:gnaapstrakti2@gmail.com' class='text-decoration-none'>link</a>, using the attached form from the website:",
+      "text": "Abstract submission is done electronically by sending an email to the following <a href='mailto:gnaapstrakti3@gmail.com' class='text-decoration-none'>link</a>, using the attached form from the website:",
       "link": "<b><a href='https://congress2026.mk' class='text-decoration-none' target='_blank'>www.congress2026.mk</a></b>"
     },
     "requirements": {
