@@ -1,6 +1,6 @@
 <template>
   <v-app>
-<!--    <NavBar />-->
+    <NavBar />
     <!-- Main Content -->
     <v-main class="main-content">
       <v-container fluid class="pa-0">

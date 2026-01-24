@@ -8,79 +8,77 @@
         </b>
       </base-paragraph>
     </small-card>
-    <base-card class="mt-10"
-      >
-        <base-paragraph>{{ t('intro') }}</base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p1') }}
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p2') }}
-        </base-paragraph>
-        <base-list style="color: #134b7a">
-          <li>
-            <b>{{ t('symposiumPage.l1B') }}</b> {{ t('symposiumPage.l1') }}
-          </li>
-          <li>
-            <b>{{ t('symposiumPage.l2B') }}</b> {{ t('symposiumPage.l2') }}
-
-          </li>
-          <li>
-            <b>{{ t('symposiumPage.l3B') }}</b> {{ t('symposiumPage.l3') }}
-          </li>
-        </base-list>
-        <base-paragraph>
-          {{ t('symposiumPage.p3') }}
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p4') }}
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p5') }}
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p6') }}
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p7') }}
-        </base-paragraph>
-        <base-paragraph class="text-center">
-          <b>
-            {{ t('symposiumPage.p8') }}
-          </b>
-        </base-paragraph>
-        <base-paragraph>
-          {{ t('symposiumPage.p9') }}
-        </base-paragraph>
-        <v-row>
-          <v-col cols="4">
-            <div class="d-flex flex-column align-center">
-              <base-paragraph class="text-center">
-                <b>{{ t('symposiumPage.signatures.sig1B') }} </b> <br/>
-                {{ t('symposiumPage.signatures.sig1') }}
-              </base-paragraph>
-              <v-img :width="200" :src="oneSignature"></v-img>
-            </div>
-          </v-col>
-          <v-col cols="4">
-            <div class="d-flex flex-column align-center">
-              <base-paragraph class="text-center">
-                <b>{{ t('symposiumPage.signatures.sig2B') }} </b> <br/>
-                {{ t('symposiumPage.signatures.sig2') }}
-              </base-paragraph>
-              <v-img :width="200" :src="twoSignature"></v-img>
-            </div>
-          </v-col>
-          <v-col cols="4">
-            <div class="d-flex flex-column align-center">
-              <base-paragraph class="text-center">
-                <b>{{ t('symposiumPage.signatures.sig3B') }} </b> <br/>
-                {{ t('symposiumPage.signatures.sig3') }}
-              </base-paragraph>
-              <v-img :width="200" :src="threeSignature"></v-img>
-            </div>
-          </v-col>
-        </v-row>
+    <base-card class="mt-10 mb-5">
+      <img :src="obrakanje1" class="float-image" />
+      <base-paragraph><b>{{ t('intro') }}</b></base-paragraph>
+      <base-paragraph>
+        <span v-html="t('symposiumPage.p1')"></span>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p2') }}
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p3') }}
+      </base-paragraph>
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p4') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p5') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p6') }}
+      </base-paragraph>
+      <base-paragraph>
+        <span v-html="t('symposiumPage.p7')"></span>
+      </base-paragraph>
+      <base-paragraph>
+        <b>
+          {{ t('symposiumPage.p8') }}
+        </b>
+      </base-paragraph>
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p9') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p10') }}
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p11') }}
+      </base-paragraph>
+    </base-card>
+    <base-card>
+      <img :src="obrakanje2" class="float-image" />
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p12') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p13') }}
+      </base-paragraph>
+      <base-paragraph>
+        <span v-html="t('symposiumPage.p14')"></span>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p15') }}
+      </base-paragraph>
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p16') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p17') }}
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p18') }}
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p19') }}
+      </base-paragraph>
+      <base-paragraph>
+        <b>{{ t('symposiumPage.p20') }}</b>
+      </base-paragraph>
+      <base-paragraph>
+        {{ t('symposiumPage.p21') }}
+      </base-paragraph>
     </base-card>
   </base-container>
 </template>
@@ -89,12 +87,10 @@
 import BaseCard from "@/components/BaseCard.vue";
 import BaseContainer from "@/components/BaseContainer.vue";
 import BaseParagraph from "@/components/BaseParagraph.vue";
-import BaseList from "@/components/BaseList.vue";
-// import oneSignature from "@/assets/Potpis1.png";
-// import twoSignature from "@/assets/Potpis2.png";
-// import threeSignature from "@/assets/Potpis3.png";
 import SmallCard from "@/components/SmallCard.vue";
 import {useI18n} from "vue-i18n";
+import obrakanje2 from "@/assets/obrakanje2.jpg";
+import obrakanje1 from "@/assets/obrakanje1.jpg";
 
 const { t } = useI18n();
 </script>
@@ -104,10 +100,28 @@ const { t } = useI18n();
   font-size: 1.8rem;
 }
 
+.float-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 20%; /* Fluid width */
+  min-width: 150px; /* Minimum size to keep it readable */
+  max-width: 20%; /* Safety to strictly bound it */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional but looks nice */
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 0.7rem;
   }
 
+  .float-image {
+    width: auto;
+    max-width: 40%; /* distinct from desktop, allow it to take up to 40% of mobile screen */
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
 }
 </style>

@@ -1,24 +1,15 @@
 <script setup lang="ts">
 
 import BaseContainer from "@/components/BaseContainer.vue";
-// import desktopImg from "@/assets/AboutImageD.png"
-// import mobileImg from "@/assets/AboutImageM.png"
-import {onMounted, onUnmounted, ref} from "vue";
+import imgMK from "@/assets/Pediatri Prva strana MK.jpg"
+import imgEN from "@/assets/Pediatri Prva strana EN.jpg"
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 
-const currentImage = ref(desktopImg);
+const { locale } = useI18n();
 
-const updateImage = () => {
-  const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
-  currentImage.value = isMobile ? mobileImg : desktopImg;
-};
-
-onMounted(() => {
-  updateImage(); // Set initial image
-  window.addEventListener('resize', updateImage); // Update on resize
-});
-
-onUnmounted(() => {
-  window.removeEventListener('resize', updateImage);
+const currentImage = computed(() => {
+  return locale.value === 'en' ? imgEN : imgMK;
 });
 </script>
 
@@ -27,7 +18,7 @@ onUnmounted(() => {
     <v-img
       :src="currentImage"
       alt="About"
-      :class="{ 'desktop-image': currentImage === desktopImg }"
+      :class="{ 'desktop-image': currentImage === imgMK || currentImage === imgEN }"
     ></v-img>
   </base-container>
 </template>

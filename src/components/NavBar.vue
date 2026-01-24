@@ -9,7 +9,8 @@
     <v-container class="d-flex justify-space-between align-center pl-0">
       <v-app-bar-title>
         <div class="d-flex align-center">
-          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block"/>
+          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block mr-3 ml-2"/>
+          <span class="logo-text-big">{{ t('navtitle.congress') }}</span>
           <span class="logo-text">{{ t('navtitle.one') }}<br/>{{ t('navtitle.two') }}</span>
         </div>
       </v-app-bar-title>
@@ -135,7 +136,7 @@
 <script setup>
 import {computed, ref, watch} from 'vue';
 import {useRoute, useRouter} from "vue-router";
-// import logo from '@/assets/PharmacyLogoBelo.png'
+import logo from '@/assets/Pediatri Logo Header.png'
 import {useI18n} from "vue-i18n";
 import {useDisplay} from "vuetify/lib/composables/index.js";
 
@@ -150,10 +151,9 @@ const activeTab = ref(0)
 const tabs = [
   { label: 'tabs.about', icon: 'mdi-information-outline', route: 'AboutPage' },
   { label: 'tabs.symposium', icon: 'mdi-chair-school', route: 'SymposiumPage' },
-  { label: 'tabs.course', icon: 'mdi-school', route: 'CoursePage' },
-  { label: 'tabs.organization', icon: 'mdi-account-group', route: 'OrganizationPage' },
-  { label: 'tabs.program', icon: 'mdi-text-box-outline', route: 'ProgramPage' },
-  { label: 'tabs.pharmapractice2024', icon: 'mdi-book', route: 'PharmaPractice2024' },
+  { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
+  { label: 'tabs.fees', icon: 'mdi-cash', route: 'RegistrationPage' },
+  { label: 'tabs.accommodations', icon: 'mdi-bed', route: 'HotelPage' }
 ]
 
 // Watch route changes to update active tab
@@ -200,17 +200,21 @@ const logoHeight = computed(() => {
 });
 
 const logoWidth = computed(() => {
-  return xs.value || sm.value ? 60 : 100;
+  return xs.value || sm.value ? 70 : 160;
 });
 </script>
 
 <style scoped>
 .app-bar {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+  background: linear-gradient(135deg, #165557 0%, #01c0ce 100%) !important;
 }
 
 .logo {
   color: #FFFFFF !important;
+}
+
+.logo-text-big {
+  margin-right: 18px;
 }
 
 .v-slide-group {
@@ -248,7 +252,7 @@ const logoWidth = computed(() => {
   border-left: 4px solid #81e6d9 !important;
 }
 .top-info-bar {
-  background: #2d3748 !important;
+  background: #028e9a !important;
   color: white !important;
   font-size: 0.875rem;
   z-index: 10;
@@ -279,8 +283,13 @@ const logoWidth = computed(() => {
 }
 @media (max-width: 768px) {
   .logo-text {
-    font-size: 0.55rem;
-    line-height: 0.7rem;
+    font-size: 0.45rem;
+    line-height: 0.6rem;
+  }
+  .logo-text-big{
+    font-size: 0.35rem;
+    line-height: 0.4rem;
+    margin-right: 6px;
   }
   .location-link {
     display: none;

@@ -10,7 +10,7 @@ import {ref} from "vue";
 import {v4 as uuidv4} from "uuid";
 import {supabase} from "@/supabase/supabase.js";
 
-const { t } = useI18n();
+const { t, tm, rt } = useI18n();
 
 const formRef = ref(null);
 const form = ref({
@@ -31,10 +31,9 @@ const categoryOptions = [
   { title: '2', value: 2 },
   { title: '3', value: 3 },
   { title: '4', value: 4 },
-  { title: '5', value: 5 },
 ];
 
-const validRule = [value => !!value || t('required')];
+const validRule = [value => !!value || t('feesPage.required')];
 const phoneRule = [
   value => !!value || t('feesPage.required'),
   value => /^[0-9+()-]{8,}$/.test(value) || t('feesPage.invalidPhone'),
@@ -64,7 +63,7 @@ async function handleSubmit() {
 
     let fileName = null;
 
-    if (form.value.category === 4) {
+    if (form.value.category === 3) {
       if (!file.value) {
         message.value = t('feesPage.selectFile');
         loading.value = false;
@@ -72,10 +71,10 @@ async function handleSubmit() {
       }
 
       const fileExtension = file.value.name.match(/\.[^.]+$/)[0].toLowerCase();
-      fileName = `documents/${Date.now()}_${uuidv4()}${fileExtension}`;
+      fileName = `pediatrics-documents/${Date.now()}_${uuidv4()}${fileExtension}`;
 
       const { error: uploadError } = await supabase.storage
-        .from('abstracts')
+        .from('projects')
         .upload(fileName, file.value);
 
       if (uploadError) {
@@ -86,7 +85,7 @@ async function handleSubmit() {
 
     }
 
-    const { error: dbError } = await supabase.from('document_submissions').insert({
+    const { error: dbError } = await supabase.from('document_submissions_pediatrics').insert({
       name: form.value.name,
       email: form.value.email,
       phone: form.value.phone,
@@ -121,134 +120,46 @@ async function handleSubmit() {
   <base-container>
     <base-card>
       <paragraph-no-indent class="text-center">
-        <b><span class="text-orange-darken-3">{{ t('feesPage.p1B') }}</span></b>
+        <span style="color: #26A69A" class="text-h5 font-weight-bold">{{ t('feesPage.title') }}</span>
       </paragraph-no-indent>
       <v-card outlined class="mt-5 mb-5">
         <v-responsive>
           <v-table class="elevation-1">
             <thead>
             <tr>
-              <th class="text-center bg-light-blue-darken-2 border">
-                {{ t('feesPage.t0') }}
+              <th class="text-center bg-teal-lighten-1 border">
+                {{ t('feesPage.table.headers.category') }}
               </th>
-              <th class="text-center bg-light-blue-darken-2 border">
-                {{ t('feesPage.t1') }}
+              <th class="text-center bg-teal-lighten-1 border">
+                {{ t('feesPage.table.headers.participantType') }}
               </th>
-              <th class="text-center bg-light-blue-darken-2 border">
-                {{ t('feesPage.t2') }}
+              <th class="text-center bg-teal-lighten-1 border">
+                {{ t('feesPage.table.headers.early') }}
               </th>
-              <th class="text-center bg-light-blue-darken-2 border">
-                {{ t('feesPage.t3') }}
+              <th class="text-center bg-teal-lighten-1 border">
+                {{ t('feesPage.table.headers.mid') }}
               </th>
-              <th class="text-center bg-light-blue-darken-2 border">
-                {{ t('feesPage.t4') }}
+              <th class="text-center bg-teal-lighten-1 border">
+                {{ t('feesPage.table.headers.late') }}
               </th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td00')}}
+            <tr v-for="i in 4" :key="i">
+              <td class="cell-bg bg-teal-lighten-4 border">
+                {{ t(`feesPage.table.row${i}.id`) }}
               </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td1').split('/')[0]}} <br/>
-                {{ t('feesPage.td1').split('/')[1]}}
+              <td class="cell-bg bg-teal-lighten-4 border">
+                <span v-html="t(`feesPage.table.row${i}.type`)"></span>
               </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td2').split('/')[0]}} <br/>
-                {{ t('feesPage.td2').split('/')[1]}}
+              <td class="cell-bg bg-teal-lighten-4 border">
+                <span v-html="t(`feesPage.table.row${i}.price1`)"></span>
               </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td3').split('/')[0]}} <br/>
-                {{ t('feesPage.td3').split('/')[1]}}
+              <td class="cell-bg bg-teal-lighten-4 border">
+                <span v-html="t(`feesPage.table.row${i}.price2`)"></span>
               </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td4').split('/')[0]}} <br/>
-                {{ t('feesPage.td4').split('/')[1]}}
-              </td>
-            </tr>
-            <tr>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td01')}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td5').split('/')[0]}} <br/>
-                {{ t('feesPage.td5').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td6').split('/')[0]}} <br/>
-                {{ t('feesPage.td6').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td7').split('/')[0]}} <br/>
-                {{ t('feesPage.td7').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td8').split('/')[0]}} <br/>
-                {{ t('feesPage.td8').split('/')[1]}}
-              </td>
-            </tr>
-            <tr>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td02')}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td9').split('/')[0]}} <br/>
-                {{ t('feesPage.td9').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td10').split('/')[0]}} <br/>
-                {{ t('feesPage.td10').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td11').split('/')[0]}} <br/>
-                {{ t('feesPage.td11').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td12').split('/')[0]}} <br/>
-                {{ t('feesPage.td12').split('/')[1]}}
-              </td>
-            </tr>
-            <tr>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td03') }}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                &#11088;{{ t('feesPage.td13').split('/')[0]}} <br/>
-                {{ t('feesPage.td13').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td14').split('/')[0]}} <br/>
-                {{ t('feesPage.td14').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td15').split('/')[0]}} <br/>
-                {{ t('feesPage.td15').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td16').split('/')[0]}} <br/>
-                {{ t('feesPage.td16').split('/')[1]}}
-              </td>
-            </tr>
-            <tr>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td04') }}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                &#11088;&#11088;{{ t('feesPage.td17').split('/')[0]}} <br/>
-                {{ t('feesPage.td17').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td18').split('/')[0]}} <br/>
-                {{ t('feesPage.td18').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td19').split('/')[0]}} <br/>
-                {{ t('feesPage.td19').split('/')[1]}}
-              </td>
-              <td class="bg-light-blue-lighten-4 border">
-                {{ t('feesPage.td20').split('/')[0]}} <br/>
-                {{ t('feesPage.td20').split('/')[1]}}
+              <td class="cell-bg bg-teal-lighten-4 border">
+                <span v-html="t(`feesPage.table.row${i}.price3`)"></span>
               </td>
             </tr>
             </tbody>
@@ -256,67 +167,61 @@ async function handleSubmit() {
         </v-responsive>
       </v-card>
       <paragraph-no-indent class="text-center">
-        <b><span class="text-orange-darken-3">{{ t('feesPage.p2B') }}</span></b>
+        <b><span class="text-red">{{ t('feesPage.info.vat') }}</span></b>
       </paragraph-no-indent>
       <paragraph-no-indent class="text-center">
-        <b style="color: #125280">
-          {{ t('feesPage.p3B') }}
+        <b style="color: #26A69A">
+          <span v-html="t('feesPage.info.calculation')"></span>
         </b>
       </paragraph-no-indent>
-      <small-card class="bg-light-blue-darken-2 mb-5">
+      <small-card class="bg-teal-lighten-1 mb-5">
         <v-row>
           <v-col cols="6">
             <base-list class="text-white font-weight-bold">
-              <li>{{ t('feesPage.l1') }}</li>
-              <li>{{ t('feesPage.l2') }}</li>
-              <li>{{ t('feesPage.l3') }}</li>
+              <li v-for="(item, index) in tm('feesPage.info.includes.col1')" :key="index">{{ rt(item) }}</li>
             </base-list>
           </v-col>
           <v-col cols="6">
             <base-list class="text-white font-weight-bold">
-              <li>{{ t('feesPage.l4') }}</li>
-              <li>{{ t('feesPage.l5') }}</li>
-              <li>{{ t('feesPage.l6') }} &#11088;&#11088;&#11088;</li>
+              <li v-for="(item, index) in tm('feesPage.info.includes.col2')" :key="index">{{ rt(item) }}</li>
             </base-list>
           </v-col>
         </v-row>
+        <base-paragraph class="text-center mt-5 text-white">&#11088;&#11088;&#11088; {{ t('feesPage.info.dinner') }}</base-paragraph>
       </small-card>
       <paragraph-no-indent>
         <b>
-          {{ t('feesPage.p4B') }}&#11088;: {{ t('feesPage.p4B2') }} <span class="text-orange-darken-3">{{ t('feesPage.p4Y')}}</span>
+          <span v-html="t('feesPage.notes.students')"></span>
         </b>
       </paragraph-no-indent>
       <paragraph-no-indent>
         <b>
-          {{ t('feesPage.p5B') }}&#11088;&#11088;: {{ t('feesPage.p5B2') }} <span class="text-orange-darken-3">{{ t('feesPage.p5Y')}}</span>
-        </b>
-      </paragraph-no-indent>
-      <paragraph-no-indent>
-        <b>
-          {{ t('feesPage.p6B') }}&#11088;&#11088;&#11088;: <span class="text-decoration-underline">{{ t('feesPage.p6U') }}</span> {{ t('feesPage.p6B2') }}
-        </b>
-      </paragraph-no-indent>
-      <paragraph-no-indent>
-        <b>
-          <span class="text-decoration-underline">{{ t('feesPage.p7U') }}</span> {{ t('feesPage.p7B')}}
+          <span v-html="t('feesPage.notes.companies')"></span>
         </b>
       </paragraph-no-indent>
       <paragraph-no-indent class="text-center">
-        <b style="color: #125280">
-          {{ t('feesPage.p8B') }} <br/>
-          {{ t('feesPage.p8B2').split('/')[0] }} | {{ t('feesPage.p8B2').split('/')[1] }}<br/>
-          {{ t('feesPage.p8B3') }} <br/>
-          <span class="text-orange-darken-3">{{ t('feesPage.p8Y') }}</span>
+        <b>
+          <span v-html="t('feesPage.notes.hotel')"></span>
+        </b>
+      </paragraph-no-indent>
+      <paragraph-no-indent class="text-center mb-10">
+        <b>
+          <span v-html="t('feesPage.notes.meals')"></span>
+        </b>
+      </paragraph-no-indent>
+      <paragraph-no-indent class="text-center">
+        <b style="color: #26A69A">
+          <span v-html="t('feesPage.payment')"></span>
         </b>
       </paragraph-no-indent>
     </base-card>
-    <small-card class="mt-10" v-if="hide">
+    <small-card class="mt-10" v-if="!hide">
       <v-form @submit.prevent="handleSubmit" ref="formRef">
         <v-text-field
           variant="outlined"
           density="comfortable"
           v-model="form.name"
-          :label="t('feesPage.nameLabel')"
+          :label="t('feesPage.form.nameLabel')"
           required
           :rules="validRule"
         />
@@ -324,7 +229,7 @@ async function handleSubmit() {
           variant="outlined"
           density="comfortable"
           v-model="form.email"
-          :label="t('feesPage.emailLabel')"
+          :label="t('feesPage.form.emailLabel')"
           required
           type="email"
           :rules="validRule"
@@ -333,7 +238,7 @@ async function handleSubmit() {
           variant="outlined"
           density="comfortable"
           v-model="form.phone"
-          :label="t('feesPage.phoneLabel')"
+          :label="t('feesPage.form.phoneLabel')"
           required
           :rules="phoneRule"
         />
@@ -341,7 +246,7 @@ async function handleSubmit() {
           variant="outlined"
           density="comfortable"
           v-model="form.institution"
-          :label="t('feesPage.institutionLabel')"
+          :label="t('feesPage.form.institutionLabel')"
           required
           :rules="validRule"
         />
@@ -349,7 +254,7 @@ async function handleSubmit() {
           variant="outlined"
           density="comfortable"
           v-model="form.category"
-          :label="t('feesPage.categoryLabel')"
+          :label="t('feesPage.form.categoryLabel')"
           :items="categoryOptions"
           item-title="title"
           item-value="value"
@@ -357,9 +262,9 @@ async function handleSubmit() {
           :rules="validRule"
         />
         <v-file-input
-          v-if="form.category === 4"
+          v-if="form.category === 3"
           v-model="file"
-          :label="t('feesPage.uploadLabel')"
+          :label="t('feesPage.form.uploadLabel')"
           accept="image/jpeg,image/png,image/heic"
           :rules="fileRule"
           variant="outlined"
@@ -367,7 +272,7 @@ async function handleSubmit() {
           show-size
         />
         <v-btn type="submit" color="primary" class="mt-4" :loading="loading">
-          {{ t('feesPage.submitLabel') }}
+          {{ t('feesPage.form.submitLabel') }}
         </v-btn>
         <v-alert
           v-if="message"
