@@ -192,7 +192,7 @@ const navigateToTab = (routeName) => {
 }
 
 const barHeight = computed(() => {
-  return xs.value || sm.value ? 80 : 120;
+  return xs.value || sm.value ? 80 : 100;
 });
 
 const logoHeight = computed(() => {

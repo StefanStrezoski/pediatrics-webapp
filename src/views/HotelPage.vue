@@ -21,7 +21,7 @@ const { t, tm, rt } = useI18n();
       <paragraph-no-indent class="text-center mb-5">
         <span style="color: #26A69A" class="text-h5 font-weight-bold">{{ t('accommodationPage.title') }}</span>
       </paragraph-no-indent>
-      <v-card rounded="l" class="mb-2 pa-1 text-center bg-teal-lighten-1">
+      <v-card rounded="l" class="mb-2 pa-1 text-center text-white" style="background-color: #028e9a;">
         <v-card-text><b>{{ t('accommodationPage.subtitle') }}</b></v-card-text>
       </v-card>
       <v-card outlined class="mt-5 mb-5">
@@ -29,22 +29,22 @@ const { t, tm, rt } = useI18n();
           <v-table>
             <thead>
             <tr>
-              <th class="text-center bg-teal-lighten-1 border">{{ t('accommodationPage.table.headers.hotel') }}</th>
-              <th class="text-center bg-teal-lighten-1 border">{{ t('accommodationPage.table.headers.accommodation') }}</th>
-              <th class="text-center bg-teal-lighten-1 border">{{ t('accommodationPage.table.headers.price') }}</th>
+              <th class="text-center text-white border" style="background-color: #028e9a">{{ t('accommodationPage.table.headers.hotel') }}</th>
+              <th class="text-center text-white border" style="background-color: #028e9a">{{ t('accommodationPage.table.headers.accommodation') }}</th>
+              <th class="text-center text-white border" style="background-color: #028e9a">{{ t('accommodationPage.table.headers.price') }}</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <th rowspan="2" class="bg-teal-lighten-4 border text-center">
+              <th rowspan="2" class="border text-center" style="background-color: #70bbc2">
                 <span v-html="t('accommodationPage.table.row1.hotel')"></span>
               </th>
-              <td class="bg-teal-lighten-4 border">{{ t('accommodationPage.table.row1.type') }}</td>
-              <td class="bg-teal-lighten-4 border"><b>{{ t('accommodationPage.table.row1.price') }}</b></td>
+              <td class="border" style="background-color: #70bbc2">{{ t('accommodationPage.table.row1.type') }}</td>
+              <td class="border" style="background-color: #70bbc2"><b>{{ t('accommodationPage.table.row1.price') }}</b></td>
             </tr>
             <tr>
-              <td class="bg-teal-lighten-4 border">{{ t('accommodationPage.table.row2.type') }}</td>
-              <td class="bg-teal-lighten-4 border"><b>{{ t('accommodationPage.table.row2.price') }}</b></td>
+              <td class="border" style="background-color: #70bbc2">{{ t('accommodationPage.table.row2.type') }}</td>
+              <td class="border" style="background-color: #70bbc2"><b>{{ t('accommodationPage.table.row2.price') }}</b></td>
             </tr>
             </tbody>
           </v-table>
@@ -53,7 +53,7 @@ const { t, tm, rt } = useI18n();
       <paragraph-no-indent class="text-center">
         <b>{{ t('accommodationPage.note') }}</b>
       </paragraph-no-indent>
-      <small-card class="bg-teal-lighten-1 mb-5">
+      <small-card class="mb-5 text-white" style="background-color: #028e9a">
         <paragraph-no-indent class="text-center"><b v-html="t('accommodationPage.cancellation.title')"></b></paragraph-no-indent>
         <base-list class="font-weight-bold">
           <li v-for="(item, index) in tm('accommodationPage.cancellation.items')" :key="index">
@@ -70,14 +70,14 @@ const { t, tm, rt } = useI18n();
       <div class="d-inline-block align-center">
         <v-img :src="brandLogo" :width="'10rem'"></v-img>
       </div>
-      <small-card class="bg-teal-lighten-1" elevation="0">
+      <small-card elevation="0" style="background-color: #028e9a">
         <v-row dense no-gutters>
           <v-col cols="6">
             <v-row dense no-gutters justify="center" align="center">
               <v-icon class="pa-7 responsive-icon" color="white">mdi-phone-in-talk</v-icon>
               <ul class="font-weight-bold text-left custom-list" style="list-style-type: none">
-                <li><a href="tel:071/317-377" class="text-white text-decoration-none">071/317-377</a>, {{ t('accommodationPage.contacts.marjan') }}</li>
-                <li><a href="tel:070/392-638" class="text-white text-decoration-none">070/392-638</a>, {{ t('accommodationPage.contacts.lara') }}</li>
+                <li class="text-white"><a href="tel:071/317-377" class="text-white text-decoration-none">071/317-377</a>, {{ t('accommodationPage.contacts.marjan') }}</li>
+                <li class="text-white"><a href="tel:070/392-638" class="text-white text-decoration-none">070/392-638</a>, {{ t('accommodationPage.contacts.lara') }}</li>
               </ul>
             </v-row>
           </v-col>
@@ -85,7 +85,7 @@ const { t, tm, rt } = useI18n();
             <v-row dense no-gutters justify="center" align="center">
               <v-icon class="responsive-icon pa-7" color="white">mdi-email-outline</v-icon>
               <ul class="font-weight-bold text-left custom-list" style="list-style-type: none">
-                <li><a href="mailto:globalneta@gmail.com" class="text-white">globalneta@gmail.com</a> {{ t('accommodationPage.contacts.andor') }}</li>
+                <li class="text-white"><a href="mailto:globalneta@gmail.com" class="text-white">globalneta@gmail.com</a> {{ t('accommodationPage.contacts.andor') }}</li>
                 <li><a href="mailto:globalnetadv@globalnetadv.mk" class="text-white">globalnetadv@globalnetadv.mk</a></li>
               </ul>
             </v-row>

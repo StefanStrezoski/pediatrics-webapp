@@ -127,38 +127,38 @@ async function handleSubmit() {
           <v-table class="elevation-1">
             <thead>
             <tr>
-              <th class="text-center bg-teal-lighten-1 border">
+              <th class="text-center border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.category') }}
               </th>
-              <th class="text-center bg-teal-lighten-1 border">
+              <th class="text-center border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.participantType') }}
               </th>
-              <th class="text-center bg-teal-lighten-1 border">
+              <th class="text-center border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.early') }}
               </th>
-              <th class="text-center bg-teal-lighten-1 border">
+              <th class="text-center border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.mid') }}
               </th>
-              <th class="text-center bg-teal-lighten-1 border">
+              <th class="text-center border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.late') }}
               </th>
             </tr>
             </thead>
             <tbody>
             <tr v-for="i in 4" :key="i">
-              <td class="cell-bg bg-teal-lighten-4 border">
+              <td class="cell-bg border" style="background-color: #70bbc2;">
                 {{ t(`feesPage.table.row${i}.id`) }}
               </td>
-              <td class="cell-bg bg-teal-lighten-4 border">
+              <td class="cell-bg border" style="background-color: #70bbc2;">
                 <span v-html="t(`feesPage.table.row${i}.type`)"></span>
               </td>
-              <td class="cell-bg bg-teal-lighten-4 border">
+              <td class="cell-bg border" style="background-color: #70bbc2;">
                 <span v-html="t(`feesPage.table.row${i}.price1`)"></span>
               </td>
-              <td class="cell-bg bg-teal-lighten-4 border">
+              <td class="cell-bg border" style="background-color: #70bbc2;">
                 <span v-html="t(`feesPage.table.row${i}.price2`)"></span>
               </td>
-              <td class="cell-bg bg-teal-lighten-4 border">
+              <td class="cell-bg border" style="background-color: #70bbc2;">
                 <span v-html="t(`feesPage.table.row${i}.price3`)"></span>
               </td>
             </tr>
@@ -174,7 +174,7 @@ async function handleSubmit() {
           <span v-html="t('feesPage.info.calculation')"></span>
         </b>
       </paragraph-no-indent>
-      <small-card class="bg-teal-lighten-1 mb-5">
+      <small-card class="mb-5" style="background-color: #028e9a;">
         <v-row>
           <v-col cols="6">
             <base-list class="text-white font-weight-bold">
