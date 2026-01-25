@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 import BaseContainer from "@/components/BaseContainer.vue";
-import imgMK from "@/assets/Pediatri Prva strana MK.jpg"
-import imgEN from "@/assets/Pediatri Prva strana EN.jpg"
+import imgMK from "@/assets/Pediatri_Prva_strana_MK.jpg"
+import imgEN from "@/assets/Pediatri_Prva_strana_EN.jpg"
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
