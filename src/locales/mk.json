@@ -53,8 +53,8 @@
   "abstractPage": {
     "title": "ПОДНЕСУВАЊЕ НА АПСТРАКТИ",
     "submission": {
-      "text": "Поднесувањетo на апстрактите се врши електронски со праќање на мејл на следниов <a href='mailto:gnaapstrakti3@gmail.com' class='text-decoration-none'>линк</a>, со користење на прикачениот образец од веб страната:",
-      "link": "<b><a href='https://congress2026.mk' class='text-decoration-none' target='_blank'>www.congress2026.mk</a></b>"
+      "text": "Поднесувањетo на апстрактите се врши електронски со праќање на мејл на следниов <a href=\"mailto:gnaapstrakti3@gmail.com\" class=\"text-decoration-none\">линк</a>, со користење на прикачениот образец од веб страната:",
+      "link": "<b><a href=\"https://congress2026.mk\" class=\"text-decoration-none\" target=\"_blank\">www.congress2026.mk</a></b>"
     },
     "requirements": {
       "font": "Апстрактите треба да бидат напишани во фонт <b>Times New Roman</b> со <b>12</b> големина на букви, со <b>единечен проред</b> и во <b>А4 формат.</b>",
