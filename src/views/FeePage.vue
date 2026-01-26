@@ -127,19 +127,19 @@ async function handleSubmit() {
           <v-table class="elevation-1">
             <thead>
             <tr>
-              <th class="text-center border" style="background-color: #028e9a;">
+              <th class="text-center text-white border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.category') }}
               </th>
-              <th class="text-center border" style="background-color: #028e9a;">
+              <th class="text-center text-white border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.participantType') }}
               </th>
-              <th class="text-center border" style="background-color: #028e9a;">
+              <th class="text-center text-white border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.early') }}
               </th>
-              <th class="text-center border" style="background-color: #028e9a;">
+              <th class="text-center text-white border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.mid') }}
               </th>
-              <th class="text-center border" style="background-color: #028e9a;">
+              <th class="text-center text-white border" style="background-color: #028e9a;">
                 {{ t('feesPage.table.headers.late') }}
               </th>
             </tr>
