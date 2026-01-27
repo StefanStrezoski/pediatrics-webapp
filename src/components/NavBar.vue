@@ -151,8 +151,8 @@ const activeTab = ref(0)
 const tabs = [
   { label: 'tabs.about', icon: 'mdi-information-outline', route: 'AboutPage' },
   { label: 'tabs.symposium', icon: 'mdi-chair-school', route: 'SymposiumPage' },
-  { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
   { label: 'tabs.organization', icon: 'mdi-account-group', route: 'OrganizationPage' },
+  { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
   { label: 'tabs.fees', icon: 'mdi-cash', route: 'RegistrationPage' },
   { label: 'tabs.accommodations', icon: 'mdi-bed', route: 'HotelPage' }
 ]
