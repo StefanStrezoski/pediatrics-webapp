@@ -13,7 +13,7 @@
   text-indent: 10px;
   font-size: 1.2rem;
   margin-bottom: 6px;
-  text-align: justify;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -21,7 +21,7 @@
     font-size: 0.8rem;
     text-indent: 10px;
     margin-bottom: 6px;
-    text-align: justify;
+    text-align: left;
   }
 }
 </style>

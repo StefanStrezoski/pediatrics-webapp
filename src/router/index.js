@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UnderConstruction from "@/views/UnderConstruction.vue";
 import AboutPage from "@/views/AboutPage.vue";
 import SymposiumPage from "@/views/SymposiumPage.vue";
 import AbstractPage from "@/views/AbstractPage.vue";
 import FeePage from "@/views/FeePage.vue";
 import HotelPage from "@/views/HotelPage.vue";
+import OrganizationPage from "@/views/OrganizationPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/abstracts',
       name: 'AbstractPage',
       component: AbstractPage
+    },
+    {
+      path: '/organization',
+      name: 'OrganizationPage',
+      component: OrganizationPage
     },
     {
       path: '/registration',
