@@ -28,11 +28,11 @@ const { t } = useI18n();
                 <li>{{ t('organizationPage.l7') }}</li>
                 <li>{{ t('organizationPage.l8') }}</li>
                 <li>{{ t('organizationPage.l9') }}</li>
-                <li>{{ t('organizationPage.l10') }}</li>
               </base-list>
             </v-col>
             <v-col cols="6">
               <base-list class="org-items">
+                <li>{{ t('organizationPage.l10') }}</li>
                 <li>{{ t('organizationPage.l11') }}</li>
                 <li>{{ t('organizationPage.l12') }}</li>
                 <li>{{ t('organizationPage.l13') }}</li>
@@ -41,7 +41,6 @@ const { t } = useI18n();
                 <li>{{ t('organizationPage.l16') }}</li>
                 <li>{{ t('organizationPage.l17') }}</li>
                 <li>{{ t('organizationPage.l18') }}</li>
-                <li>{{ t('organizationPage.l19') }}</li>
               </base-list>
             </v-col>
           </v-row>
@@ -57,6 +56,7 @@ const { t } = useI18n();
           <v-row>
             <v-col cols="6">
               <base-list class="org-items">
+                <li>{{ t('organizationPage.l19') }}</li>
                 <li>{{ t('organizationPage.l20') }}</li>
                 <li>{{ t('organizationPage.l21') }}</li>
                 <li>{{ t('organizationPage.l22') }}</li>
@@ -78,6 +78,7 @@ const { t } = useI18n();
                 <li>{{ t('organizationPage.l34') }}</li>
                 <li>{{ t('organizationPage.l35') }}</li>
                 <li>{{ t('organizationPage.l36') }}</li>
+                <li>{{ t('organizationPage.l37') }}</li>
               </base-list>
             </v-col>
           </v-row>
