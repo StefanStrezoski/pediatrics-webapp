@@ -3,7 +3,7 @@
     <small-card>
       <base-paragraph class="hero-title text-center">
         <b>
-          {{ t('navtitle.one') }} <br/>
+          {{ t('navtitle.one') }} <br />
           {{ t('navtitle.two') }}
         </b>
       </base-paragraph>
@@ -88,7 +88,7 @@ import BaseCard from "@/components/BaseCard.vue";
 import BaseContainer from "@/components/BaseContainer.vue";
 import BaseParagraph from "@/components/BaseParagraph.vue";
 import SmallCard from "@/components/SmallCard.vue";
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 import obrakanje2 from "@/assets/obrakanje2.jpg";
 import obrakanje1 from "@/assets/obrakanje1.jpg";
 
@@ -104,11 +104,16 @@ const { t } = useI18n();
   float: left;
   margin-right: 20px;
   margin-bottom: 10px;
-  width: 20%; /* Fluid width */
-  min-width: 150px; /* Minimum size to keep it readable */
-  max-width: 20%; /* Safety to strictly bound it */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional but looks nice */
+  width: 20%;
+  /* Fluid width */
+  min-width: 150px;
+  /* Minimum size to keep it readable */
+  max-width: 20%;
+  /* Safety to strictly bound it */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional but looks nice */
 }
 
 @media (max-width: 768px) {
@@ -118,7 +123,8 @@ const { t } = useI18n();
 
   .float-image {
     width: auto;
-    max-width: 40%; /* distinct from desktop, allow it to take up to 40% of mobile screen */
+    max-width: 40%;
+    /* distinct from desktop, allow it to take up to 40% of mobile screen */
     float: left;
     margin-right: 15px;
     margin-bottom: 10px;

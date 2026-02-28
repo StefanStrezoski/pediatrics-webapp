@@ -5,6 +5,9 @@ import AbstractPage from "@/views/AbstractPage.vue";
 import FeePage from "@/views/FeePage.vue";
 import HotelPage from "@/views/HotelPage.vue";
 import OrganizationPage from "@/views/OrganizationPage.vue";
+import ProgramPage from "@/views/ProgramPage.vue";
+import WorkshopPage from "@/views/WorkshopPage.vue";
+import MembershipPage from "@/views/MembershipPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +28,16 @@ const router = createRouter({
       component: AbstractPage
     },
     {
+      path: '/program',
+      name: 'ProgramPage',
+      component: ProgramPage
+    },
+    {
+      path: '/workshop',
+      name: 'WorkshopPage',
+      component: WorkshopPage
+    },
+    {
       path: '/organization',
       name: 'OrganizationPage',
       component: OrganizationPage
@@ -38,6 +51,11 @@ const router = createRouter({
       path: '/accommodations',
       name: 'HotelPage',
       component: HotelPage
+    },
+    {
+      path: '/membership',
+      name: 'MembershipPage',
+      component: MembershipPage
     }
   ],
 })

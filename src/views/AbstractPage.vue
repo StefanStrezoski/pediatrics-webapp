@@ -151,13 +151,15 @@ const { t } = useI18n();
 
 <style scoped>
 .title-card {
-  background-color:  #028e9a;
+  background-color: #028e9a;
   color: white;
 }
+
 .website-link {
   color: #028e9a;
   font-size: 36px;
 }
+
 @media (max-width: 768px) {
   .website-link {
     font-size: 24px;

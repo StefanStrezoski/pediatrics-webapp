@@ -5,10 +5,10 @@ import BaseCard from "@/components/BaseCard.vue";
 import SmallCard from "@/components/SmallCard.vue";
 import BaseList from "@/components/BaseList.vue";
 import ParagraphNoIndent from "@/components/ParagraphNoIndent.vue";
-import {useI18n} from "vue-i18n";
-import {ref} from "vue";
-import {v4 as uuidv4} from "uuid";
-import {supabase} from "@/supabase/supabase.js";
+import { useI18n } from "vue-i18n";
+import { ref } from "vue";
+import { v4 as uuidv4 } from "uuid";
+import { supabase } from "@/supabase/supabase.js";
 
 const { t, tm, rt } = useI18n();
 
@@ -126,42 +126,42 @@ async function handleSubmit() {
         <v-responsive>
           <v-table class="elevation-1">
             <thead>
-            <tr>
-              <th class="text-center text-white border" style="background-color: #028e9a;">
-                {{ t('feesPage.table.headers.category') }}
-              </th>
-              <th class="text-center text-white border" style="background-color: #028e9a;">
-                {{ t('feesPage.table.headers.participantType') }}
-              </th>
-              <th class="text-center text-white border" style="background-color: #028e9a;">
-                {{ t('feesPage.table.headers.early') }}
-              </th>
-              <th class="text-center text-white border" style="background-color: #028e9a;">
-                {{ t('feesPage.table.headers.mid') }}
-              </th>
-              <th class="text-center text-white border" style="background-color: #028e9a;">
-                {{ t('feesPage.table.headers.late') }}
-              </th>
-            </tr>
+              <tr>
+                <th class="text-center text-white border" style="background-color: #028e9a;">
+                  {{ t('feesPage.table.headers.category') }}
+                </th>
+                <th class="text-center text-white border" style="background-color: #028e9a;">
+                  {{ t('feesPage.table.headers.participantType') }}
+                </th>
+                <th class="text-center text-white border" style="background-color: #028e9a;">
+                  {{ t('feesPage.table.headers.early') }}
+                </th>
+                <th class="text-center text-white border" style="background-color: #028e9a;">
+                  {{ t('feesPage.table.headers.mid') }}
+                </th>
+                <th class="text-center text-white border" style="background-color: #028e9a;">
+                  {{ t('feesPage.table.headers.late') }}
+                </th>
+              </tr>
             </thead>
             <tbody>
-            <tr v-for="i in 4" :key="i">
-              <td class="cell-bg border" style="background-color: #70bbc2;">
-                {{ t(`feesPage.table.row${i}.id`) }}
-              </td>
-              <td class="cell-bg border" style="background-color: #70bbc2;">
-                <span v-html="t(`feesPage.table.row${i}.type`)"></span>
-              </td>
-              <td class="cell-bg border" style="background-color: #70bbc2;">
-                <span v-html="t(`feesPage.table.row${i}.price1`)"></span>
-              </td>
-              <td class="cell-bg border" style="background-color: #70bbc2;">
-                <span v-html="t(`feesPage.table.row${i}.price2`)"></span>
-              </td>
-              <td class="cell-bg border" style="background-color: #70bbc2;">
-                <span v-html="t(`feesPage.table.row${i}.price3`)"></span>
-              </td>
-            </tr>
+              <tr v-for="i in 4" :key="i">
+                <td class="cell-bg border" style="background-color: #70bbc2;">
+                  {{ t(`feesPage.table.row${i}.id`) }}
+                </td>
+                <td class="cell-bg border" style="background-color: #70bbc2;">
+                  <span v-html="t(`feesPage.table.row${i}.type`)"></span>
+                </td>
+                <td class="cell-bg border" style="background-color: #70bbc2;">
+                  <span v-html="t(`feesPage.table.row${i}.price1`)"></span>
+                </td>
+                <td class="cell-bg border" style="background-color: #70bbc2;">
+                  <span v-html="t(`feesPage.table.row${i}.price2`)"></span>
+                </td>
+                <td class="cell-bg border" style="background-color: #70bbc2;">
+                  <span v-html="t(`feesPage.table.row${i}.price3`)"></span>
+                </td>
+              </tr>
             </tbody>
           </v-table>
         </v-responsive>
@@ -187,7 +187,8 @@ async function handleSubmit() {
             </base-list>
           </v-col>
         </v-row>
-        <base-paragraph class="text-center mt-5 text-white">&#11088;&#11088;&#11088; {{ t('feesPage.info.dinner') }}</base-paragraph>
+        <base-paragraph class="text-center mt-5 text-white">&#11088;&#11088;&#11088; {{ t('feesPage.info.dinner')
+          }}</base-paragraph>
       </small-card>
       <paragraph-no-indent>
         <b>
@@ -217,70 +218,24 @@ async function handleSubmit() {
     </base-card>
     <small-card class="mt-10" v-if="!hide">
       <v-form @submit.prevent="handleSubmit" ref="formRef">
-        <v-text-field
-          variant="outlined"
-          density="comfortable"
-          v-model="form.name"
-          :label="t('feesPage.form.nameLabel')"
-          required
-          :rules="validRule"
-        />
-        <v-text-field
-          variant="outlined"
-          density="comfortable"
-          v-model="form.email"
-          :label="t('feesPage.form.emailLabel')"
-          required
-          type="email"
-          :rules="validRule"
-        />
-        <v-text-field
-          variant="outlined"
-          density="comfortable"
-          v-model="form.phone"
-          :label="t('feesPage.form.phoneLabel')"
-          required
-          :rules="phoneRule"
-        />
-        <v-text-field
-          variant="outlined"
-          density="comfortable"
-          v-model="form.institution"
-          :label="t('feesPage.form.institutionLabel')"
-          required
-          :rules="validRule"
-        />
-        <v-select
-          variant="outlined"
-          density="comfortable"
-          v-model="form.category"
-          :label="t('feesPage.form.categoryLabel')"
-          :items="categoryOptions"
-          item-title="title"
-          item-value="value"
-          required
-          :rules="validRule"
-        />
-        <v-file-input
-          v-if="form.category === 3"
-          v-model="file"
-          :label="t('feesPage.form.uploadLabel')"
-          accept="image/jpeg,image/png,image/heic"
-          :rules="fileRule"
-          variant="outlined"
-          density="comfortable"
-          show-size
-        />
+        <v-text-field variant="outlined" density="comfortable" v-model="form.name" :label="t('feesPage.form.nameLabel')"
+          required :rules="validRule" />
+        <v-text-field variant="outlined" density="comfortable" v-model="form.email"
+          :label="t('feesPage.form.emailLabel')" required type="email" :rules="validRule" />
+        <v-text-field variant="outlined" density="comfortable" v-model="form.phone"
+          :label="t('feesPage.form.phoneLabel')" required :rules="phoneRule" />
+        <v-text-field variant="outlined" density="comfortable" v-model="form.institution"
+          :label="t('feesPage.form.institutionLabel')" required :rules="validRule" />
+        <v-select variant="outlined" density="comfortable" v-model="form.category"
+          :label="t('feesPage.form.categoryLabel')" :items="categoryOptions" item-title="title" item-value="value"
+          required :rules="validRule" />
+        <v-file-input v-if="form.category === 3" v-model="file" :label="t('feesPage.form.uploadLabel')"
+          accept="image/jpeg,image/png,image/heic" :rules="fileRule" variant="outlined" density="comfortable"
+          show-size />
         <v-btn type="submit" color="primary" class="mt-4" :loading="loading">
           {{ t('feesPage.form.submitLabel') }}
         </v-btn>
-        <v-alert
-          v-if="message"
-          class="mt-4"
-          :type="success ? 'success' : 'error'"
-          border="start"
-          variant="tonal"
-        >
+        <v-alert v-if="message" class="mt-4" :type="success ? 'success' : 'error'" border="start" variant="tonal">
           {{ message }}
         </v-alert>
       </v-form>
@@ -288,5 +243,4 @@ async function handleSubmit() {
   </base-container>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

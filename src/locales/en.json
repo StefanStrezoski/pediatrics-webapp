@@ -1,11 +1,15 @@
 {
   "tabs": {
     "about": "About Event",
-    "symposium": "Congress",
+    "symposium": "About us",
     "abstracts": "Abstracts",
+    "program": "Program",
+    "workshop": "Workshop",
     "fees": "Registration",
     "organization": "Committee",
-    "accommodations": "Accommodation"
+    "accommodations": "Accommodation",
+    "workshopRegistration": "Workshop Registration",
+    "signup": "Register"
   },
   "navtitle": {
     "congress": "CONGRESS",
@@ -149,30 +153,30 @@
       "row1": {
         "id": "1",
         "type": "Members of PAGNIA and NEONATO",
-        "price1": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>",
-        "price2": "9.920 MKD <br/> 160 € <br/> <span class='text-red font-weight-bold'>(136 € + 18% VAT)</span>",
-        "price3": "11.160 MKD <br/> 180 € <br/> <span class='text-red font-weight-bold'>(153 € + 18% VAT)</span>"
+        "price1": "8.990 MKD <br/> 145 €",
+        "price2": "9.920 MKD <br/> 160 €",
+        "price3": "11.160 MKD <br/> 180 €"
       },
       "row2": {
         "id": "2",
         "type": "Other PARTICIPANTS",
-        "price1": "10.230 MKD <br/> 165 € <br/> <span class='text-red font-weight-bold'>(140 € + 18% VAT)</span>",
-        "price2": "11.470 MKD <br/> 185 € <br/> <span class='text-red font-weight-bold'>(157 € + 18% VAT)</span>",
-        "price3": "12.710 MKD <br/> 205 € <br/> <span class='text-red font-weight-bold'>(174 € + 18% VAT)</span>"
+        "price1": "10.230 MKD <br/> 165 €",
+        "price2": "11.470 MKD <br/> 185 €",
+        "price3": "12.710 MKD <br/> 205 €"
       },
       "row3": {
         "id": "3",
         "type": "&#11088; Residents and students",
-        "price1": "6.820 MKD <br/> 110 € <br/> <span class='text-red font-weight-bold'>(93 € + 18% VAT)</span>",
-        "price2": "8.060 MKD <br/> 130 € <br/> <span class='text-red font-weight-bold'>(110 € + 18% VAT)</span>",
-        "price3": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>"
+        "price1": "6.820 MKD <br/> 110 €",
+        "price2": "8.060 MKD <br/> 130 €",
+        "price3": "8.990 MKD <br/> 145 €"
       },
       "row4": {
         "id": "4",
         "type": "&#11088;&#11088; Company representatives and other accompanying persons",
-        "price1": "6.820 MKD <br/> 110 € <br/> <span class='text-red font-weight-bold'>(93 € + 18% VAT)</span>",
-        "price2": "8.060 MKD <br/> 130 € <br/> <span class='text-red font-weight-bold'>(110 € + 18% VAT)</span>",
-        "price3": "8.990 MKD <br/> 145 € <br/> <span class='text-red font-weight-bold'>(123 € + 18% VAT)</span>"
+        "price1": "6.820 MKD <br/> 110 €",
+        "price2": "8.060 MKD <br/> 130 €",
+        "price3": "8.990 MKD <br/> 145 €"
       }
     },
     "info": {
@@ -249,6 +253,98 @@
       "marjan": "Marjan Dimeski",
       "lara": "Lara Velevska",
       "andor": "and/or"
+    }
+  },
+  "programPage": {
+    "title": "WORKING PROGRAM",
+    "days": {
+      "friday": "FRIDAY, MAY 08, 2026",
+      "saturday": "SATURDAY, MAY 09, 2026",
+      "sunday": "SUNDAY, MAY 10, 2026"
+    },
+    "workshops": {
+      "title": "WORKSHOPS",
+      "w1": "Workshop 1: Autism Screening: Using the M-CHAT R/F Tool in Early Childhood",
+      "w2": "Workshop 2: PRIMARY NEONATAL RESUSCITATION",
+      "w3": "Workshop 3: HEALTHCARE LEADERSHIP",
+      "w4": "Workshop 4: ABDOMINAL ULTRASONOGRAPHY"
+    },
+    "sessions": {
+      "title": "PROFESSIONAL SESSIONS",
+      "s1": "Session 1: ALLERGOLOGY",
+      "s2": "Session 2: CLINICAL IMMUNOLOGY",
+      "s4": "Session 4: NEONATOLOGY",
+      "s5": "Session 5: GASTROENTEROHEPATOLOGY 1",
+      "s6": "Session 6: GASTROENTEROHEPATOLOGY 2",
+      "s7": "Session 7: ORAL PRESENTATIONS 1",
+      "s8": "Session 8: ORAL PRESENTATIONS 2"
+    },
+    "poster": {
+      "title": "POSTER SESSION",
+      "desc": "POSTER PRESENTATIONS"
+    }
+  },
+  "workshopPage": {
+    "title": "WORKSHOP REGISTRATION",
+    "intro": "Dear colleagues, collaborators and dear friends,",
+    "p1": "It is my exceptional honor and pleasure to invite you to the planned Workshops which are part of the Congress with international participation organized by PAGNIA and ZNRM titled \"Multidisciplinary approach for healthy childhood - our common care from day one\"",
+    "p2": "Each workshop will be separately accredited and has an appropriate number of points obtained from the Medical Chamber of RS Macedonia.",
+    "p3": "Due to limited space and the use of appropriate medical equipment during the workshops, please register your participation in time.",
+    "p4": "The number of participants per workshop is limited to a maximum of 30 participants, and applications will be accepted until the approved number of participants is filled.",
+    "p5": "The principle of registration for workshop participation is {action}.",
+    "firstCome": "FIRST COME, FIRST SERVED",
+    "p6": "Based on your initially accepted application for one or more Workshops, you will receive a notification from Global Net Adv that you should pay the Pro-forma Invoice for Early Registration and the calculation for the total number of registered workshops, or only for Participation in the total number of workshops without participation in the Congress.",
+    "p7": "By delivering the payment, Global Net Adv will issue you a Confirmation of your participation in the Congress and the registered workshops.",
+    "table": {
+      "title": "WORKSHOP PARTICIPATION PRICES",
+      "headers": {
+        "type": "Participant Type",
+        "price": "PARTICIPATION PRICES FOR 1 (ONE) ACCREDITED WORKSHOP"
+      },
+      "row1": "Members of Associations PAGNIA and/or ZNM Payment for EARLY REGISTRATION and",
+      "row1_price": "+ 1,550 MKD \n (25 €)",
+      "row2": "OTHER PARTICIPANTS Payment for EARLY REGISTRATION and",
+      "row2_price": "+ 2,170 MKD \n (35 €)",
+      "row3": "RESIDENTS AND STUDENTS Payment for EARLY REGISTRATION and",
+      "row3_price": "+ 1,250 MKD \n (20 €)",
+      "row4": "PARTICIPATION ONLY IN A WORKSHOP, WITHOUT PARTICIPATION IN THE CONGRESS",
+      "row4_price": "3,100 MKD \n (50 €)"
+    },
+    "formTitle": "Your registration for participation in one or more workshops should be done here:",
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "institution": "Institution",
+      "country": "Country",
+      "email": "E-mail",
+      "phone": "Phone Number",
+      "category": "Category",
+      "submit": "Confirm"
+    },
+    "note": "NOTE: {filled} \n For additional information, feel free to contact the Global Net Adv agency, at the following telephone numbers: \n {marjan} Marjan Dimeski or {lara} Lara Veleveska",
+    "noteFilled": "If you cannot register for any of the attached workshops, it means that the maximum number of participants allowed has been reached.",
+    "phoneMarjan": "071/317-377",
+    "phoneLara": "070/392-638"
+  },
+  "membershipPage": {
+    "title": "Membership",
+    "downloadLink": "Download the membership form (PDF)",
+    "pagniaTitle": "PAGNIA Signup",
+    "neonatologyTitle": "Neonatology Association Signup",
+    "labels": {
+      "name": "Full Name",
+      "email": "E-mail",
+      "phone": "Phone Number",
+      "licenseNumber": "License Number",
+      "institution": "Institution",
+      "specialization": "Specialization",
+      "submit": "Submit"
+    },
+    "successMsg": "Registration successful!",
+    "errorMsg": "Error during registration. Please try again.",
+    "validation": {
+      "required": "This field is required",
+      "email": "Enter a valid e-mail"
     }
   }
 }

@@ -1,144 +1,79 @@
 <template>
-  <v-app-bar
-    flat
-    density="compact"
-    :height="barHeight"
-    class="top-info-bar"
-    elevation="4"
-  >
+  <v-app-bar flat density="compact" :height="barHeight" class="top-info-bar" elevation="4">
     <v-container class="d-flex justify-space-between align-center pl-0">
       <v-app-bar-title>
         <div class="d-flex align-center">
-          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block mr-3 ml-2"/>
+          <v-img :src="logo" :height="logoHeight" :max-width="logoWidth" alt="Logo" class="d-inline-block mr-3 ml-2" />
           <span class="logo-text-big">{{ t('navtitle.congress') }}</span>
-          <span class="logo-text">{{ t('navtitle.one') }}<br/>{{ t('navtitle.two') }}</span>
+          <span class="logo-text">{{ t('navtitle.one') }}<br />{{ t('navtitle.two') }}</span>
         </div>
       </v-app-bar-title>
 
       <div class="text-right pr-5 mr-4 info-section" style="border-right: 1px solid black">
         <p>
-          {{ t('infoSection.l1') }} <br/>
+          {{ t('infoSection.l1') }} <br />
           {{ t('infoSection.l2') }}
         </p>
       </div>
 
-      <a
-        href="https://maps.app.goo.gl/5qJc3Phb38ACxsoU9"
-        target="_blank"
-        class="text-caption text-white text-decoration-none location-link"
-      >
+      <a href="https://maps.app.goo.gl/5qJc3Phb38ACxsoU9" target="_blank"
+        class="text-caption text-white text-decoration-none location-link">
         📍 {{ t('location') }}
       </a>
     </v-container>
   </v-app-bar>
-  <v-app-bar
-    :elevation="4"
-    class="app-bar"
-    height="60"
-    fixed
-    density="compact"
-  >
+  <v-app-bar :elevation="4" class="app-bar" height="60" fixed density="compact">
     <v-container class="d-flex align-center">
       <!-- Desktop Navigation -->
-      <v-tabs
-        v-model="activeTab"
-        class="d-none d-md-flex"
-        align-tabs="center"
-        color="accent"
-        slider-color="accent"
-        @update:model-value="handleTabChange"
-      >
-        <v-tab
-          v-for="(tab, index) in tabs"
-          :key="index"
-          :value="index"
-          class="nav-tab pa-3"
-          :prepend-icon="tab.icon"
-        >
+      <v-tabs v-model="activeTab" class="d-none d-md-flex" align-tabs="center" color="accent" slider-color="accent"
+        @update:model-value="handleTabChange">
+        <v-tab v-for="(tab, index) in tabs" :key="index" :value="index" class="nav-tab pa-3" :prepend-icon="tab.icon">
           {{ t(`${tab.label}`) }}
         </v-tab>
       </v-tabs>
       <v-spacer></v-spacer>
-      <v-btn-toggle
-        v-model="selectedLang"
-        mandatory
-        density="compact"
-        class="lang-toggle d-none d-md-flex ms-4"
-        @update:modelValue="changeLanguage"
-      >
-        <v-btn
-          v-for="lang in languages"
-          :key="lang.code"
-          :value="lang.code"
-          size="small"
-          variant="text"
-          class="text-white text-caption d-flex align-center"
-        >
+      <v-btn-toggle v-model="selectedLang" mandatory density="compact" class="lang-toggle d-none d-md-flex ms-4"
+        @update:modelValue="changeLanguage">
+        <v-btn v-for="lang in languages" :key="lang.code" :value="lang.code" size="small" variant="text"
+          class="text-white text-caption d-flex align-center">
           <v-img :src="lang.icon" height="16" width="24" class="me-1" />
         </v-btn>
       </v-btn-toggle>
       <!-- Mobile Menu -->
-      <v-app-bar-nav-icon
-        class="d-md-none"
-        @click="drawer = !drawer"
-        color="white"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" color="white"></v-app-bar-nav-icon>
     </v-container>
   </v-app-bar>
 
   <!-- Mobile Navigation Drawer -->
-  <v-navigation-drawer
-    v-model="drawer"
-    temporary
-    location="right"
-    class="mobile-nav"
-  >
+  <v-navigation-drawer v-model="drawer" temporary location="right" class="mobile-nav">
     <v-list>
-      <v-list-item
-        v-for="(tab, index) in tabs"
-        :key="index"
-        @click="navigateToTab(tab.route)"
-        :class="{ 'active-mobile-item': $route.name === tab.route }"
-      >
+      <v-list-item v-for="(tab, index) in tabs" :key="index" @click="navigateToTab(tab.route)"
+        :class="{ 'active-mobile-item': $route.name === tab.route }">
         <template v-slot:prepend>
           <v-icon>{{ tab.icon }}</v-icon>
         </template>
         <v-list-item-title>{{ t(`${tab.label}`) }}</v-list-item-title>
       </v-list-item>
     </v-list>
-    <v-btn-toggle
-      v-model="selectedLang"
-      mandatory
-      density="compact"
-      @update:modelValue="changeLanguage"
-    >
-      <v-btn
-        v-for="lang in languages"
-        :key="lang.code"
-        :value="lang.code"
-        size="small"
-        variant="outlined"
-        class="text-caption d-flex align-center"
-      >
+    <v-btn-toggle v-model="selectedLang" mandatory density="compact" @update:modelValue="changeLanguage">
+      <v-btn v-for="lang in languages" :key="lang.code" :value="lang.code" size="small" variant="outlined"
+        class="text-caption d-flex align-center">
         <v-img :src="lang.icon" height="16" width="24" class="me-1" />
       </v-btn>
     </v-btn-toggle>
-    <a
-      href="https://maps.app.goo.gl/5qJc3Phb38ACxsoU9"
-      target="_blank"
-      class="text-caption text-white text-decoration-none"
-    >
+    <a href="https://maps.app.goo.gl/5qJc3Phb38ACxsoU9" target="_blank"
+      class="text-caption text-white text-decoration-none">
       📍 {{ t('location') }}
     </a>
   </v-navigation-drawer>
 </template>
 
 <script setup>
-import {computed, ref, watch} from 'vue';
-import {useRoute, useRouter} from "vue-router";
+import { computed, ref, watch } from 'vue';
+import { useRoute, useRouter } from "vue-router";
 import logo from '@/assets/Pediatri Logo Header.png'
-import {useI18n} from "vue-i18n";
-import {useDisplay} from "vuetify/lib/composables/index.js";
+import { useI18n } from "vue-i18n";
+import { useDisplay } from "vuetify/lib/composables/index.js";
 
 const router = useRouter()
 const route = useRoute()
@@ -153,8 +88,11 @@ const tabs = [
   { label: 'tabs.symposium', icon: 'mdi-chair-school', route: 'SymposiumPage' },
   { label: 'tabs.organization', icon: 'mdi-account-group', route: 'OrganizationPage' },
   { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
+  { label: 'tabs.program', icon: 'mdi-calendar-clock', route: 'ProgramPage' },
+  { label: 'tabs.workshop', icon: 'mdi-presentation', route: 'WorkshopPage' },
   { label: 'tabs.fees', icon: 'mdi-cash', route: 'RegistrationPage' },
-  { label: 'tabs.accommodations', icon: 'mdi-bed', route: 'HotelPage' }
+  { label: 'tabs.accommodations', icon: 'mdi-bed', route: 'HotelPage' },
+  { label: 'tabs.signup', icon: 'mdi-account-plus', route: 'MembershipPage' }
 ]
 
 // Watch route changes to update active tab
@@ -252,49 +190,59 @@ const logoWidth = computed(() => {
   background: rgba(129, 230, 217, 0.2) !important;
   border-left: 4px solid #81e6d9 !important;
 }
+
 .top-info-bar {
   background: #028e9a !important;
   color: white !important;
   font-size: 0.875rem;
   z-index: 10;
 }
+
 .info-section {
   font-size: 1.1rem;
   line-height: 1.2rem;
 }
+
 .logo-text {
   font-size: 1.1rem;
   line-height: 1.2rem;
 }
+
 .lang-toggle {
   max-width: 100%;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .lang-toggle .v-btn {
   min-width: 60px;
   padding: 0 8px;
   text-transform: none;
 }
+
 @media (min-width: 768px) {
   .mobile-nav {
     display: none;
   }
 
 }
+
 @media (max-width: 768px) {
   .logo-text {
     font-size: 0.45rem;
     line-height: 0.6rem;
   }
-  .logo-text-big{
+
+  .logo-text-big {
     font-size: 0.35rem;
     line-height: 0.4rem;
     margin-right: 6px;
   }
+
   .location-link {
     display: none;
   }
+
   .info-section {
     font-size: 0.5rem;
     line-height: 0.7rem;
