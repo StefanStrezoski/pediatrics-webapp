@@ -341,8 +341,9 @@ async function handleSubmit() {
         {{ message }}
       </v-alert>
 
-      <div class="mt-8 text-body-1 text-center font-italic text-grey-darken-2" v-html="t('workshopPage.note')">
-      </div>
+      <base-paragraph class="mt-8 text-grey-darken-1 text-center">
+        <span v-html="t('workshopPage.note')"></span>
+      </base-paragraph>
     </small-card>
   </base-container>
 </template>

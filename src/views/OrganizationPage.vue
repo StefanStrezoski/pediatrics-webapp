@@ -3,7 +3,7 @@
 import BaseContainer from "@/components/BaseContainer.vue";
 import BaseList from "@/components/BaseList.vue";
 import SmallCard from "@/components/SmallCard.vue";
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 </script>
@@ -13,7 +13,7 @@ const { t } = useI18n();
     <v-row>
       <v-col cols="12">
         <v-card rounded="xl" class="mb-2 pa-1 text-center title-card">
-          <v-card-text><b>{{ t('organizationPage.title1') }}</b></v-card-text>
+          <v-card-text><b class="text-h5 font-weight-bold">{{ t('organizationPage.title1') }}</b></v-card-text>
         </v-card>
         <small-card>
           <v-row>
@@ -51,7 +51,7 @@ const { t } = useI18n();
     <v-row>
       <v-col cols="12">
         <v-card rounded="xl" class="mb-2 pa-1 text-center title-card">
-          <v-card-text><b>{{ t('organizationPage.title2') }}</b></v-card-text>
+          <v-card-text><b class="text-h5 font-weight-bold">{{ t('organizationPage.title2') }}</b></v-card-text>
         </v-card>
         <small-card>
           <v-row>
@@ -91,10 +91,11 @@ const { t } = useI18n();
 </template>
 
 <style scoped>
-.org-items{
+.org-items {
   list-style-type: none;
   text-align: left;
 }
+
 .title-card {
   background-color: #028e9a;
   color: white;

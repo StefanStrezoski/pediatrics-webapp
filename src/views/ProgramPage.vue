@@ -14,7 +14,7 @@ const { t } = useI18n();
 
     <!-- Friday -->
     <v-row class="mb-4">
-      <v-col cols="12">
+      <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.friday') }}
         </div>
@@ -27,7 +27,7 @@ const { t } = useI18n();
         <v-icon icon="mdi-presentation" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.workshops.title') }}</span>
       </div>
-      <v-list density="comfortable">
+      <v-list density="comfortable" class="text-left">
         <v-list-item v-for="i in 4" :key="'w' + i">
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="primary" />
@@ -45,7 +45,7 @@ const { t } = useI18n();
         <v-icon icon="mdi-account-group" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.sessions.title') }}</span>
       </div>
-      <v-list density="comfortable">
+      <v-list density="comfortable" class="text-left">
         <v-list-item>
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="secondary" />
@@ -59,7 +59,7 @@ const { t } = useI18n();
 
     <!-- Saturday -->
     <v-row class="mb-4">
-      <v-col cols="12">
+      <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.saturday') }}
         </div>
@@ -71,7 +71,7 @@ const { t } = useI18n();
         <v-icon icon="mdi-account-group" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.sessions.title') }}</span>
       </div>
-      <v-list density="comfortable">
+      <v-list density="comfortable" class="text-left">
         <v-list-item v-for="i in [2, 4, 5, 6]" :key="'s' + i">
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="secondary" />
@@ -85,7 +85,7 @@ const { t } = useI18n();
 
     <!-- Sunday -->
     <v-row class="mb-4">
-      <v-col cols="12">
+      <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.sunday') }}
         </div>
@@ -97,7 +97,7 @@ const { t } = useI18n();
         <v-icon icon="mdi-account-group" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.sessions.title') }}</span>
       </div>
-      <v-list density="comfortable">
+      <v-list density="comfortable" class="text-left">
         <v-list-item v-for="i in [7, 8]" :key="'s' + i">
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="secondary" />
@@ -115,7 +115,7 @@ const { t } = useI18n();
         <v-icon icon="mdi-file-presentation-box" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.poster.title') }}</span>
       </div>
-      <v-card-text class="pa-6 text-center">
+      <v-card-text class="pa-6 text-left">
         <div class="text-h6 font-weight-medium text-grey-darken-3">
           {{ t('programPage.poster.desc') }}
         </div>
@@ -155,6 +155,7 @@ const { t } = useI18n();
 .v-list-item-title {
   font-size: 1.1rem !important;
   line-height: 1.4 !important;
+  text-align: left !important;
 }
 
 @media (max-width: 600px) {

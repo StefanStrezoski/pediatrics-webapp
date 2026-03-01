@@ -4,7 +4,7 @@
     "symposium": "About us",
     "abstracts": "Abstracts",
     "program": "Program",
-    "workshop": "Workshop",
+    "workshop": "Workshops",
     "fees": "Registration",
     "organization": "Committee",
     "accommodations": "Accommodation",
@@ -321,7 +321,7 @@
       "category": "Category",
       "submit": "Confirm"
     },
-    "note": "NOTE: {filled} \n For additional information, feel free to contact the Global Net Adv agency, at the following telephone numbers: \n {marjan} Marjan Dimeski or {lara} Lara Veleveska",
+    "note": "<b>NOTE:</b> If you cannot register for any of the attached workshops, it means that the maximum number of participants allowed has been reached. <br /> For additional information, feel free to contact the Global Net Adv agency, at the following telephone numbers: <br /> <b>071/317-377</b> Marjan Dimeski or <b>070/392-638</b> Lara Veleveska",
     "noteFilled": "If you cannot register for any of the attached workshops, it means that the maximum number of participants allowed has been reached.",
     "phoneMarjan": "071/317-377",
     "phoneLara": "070/392-638"
