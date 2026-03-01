@@ -8,7 +8,7 @@
     </small-card>
 
     <!-- Download Section -->
-    <v-row justify="center" class="mb-8">
+    <v-row justify="center" class="mb-8" v-if="hide">
       <v-col cols="12" sm="8" md="6" class="text-center">
         <v-btn href="/files/Membership.docx" target="_blank" color="primary" prepend-icon="mdi-file-pdf-box"
           size="large" class="text-none">
@@ -20,7 +20,7 @@
     <!-- Forms Section -->
     <v-row>
       <!-- PAGNIA Form -->
-      <v-col cols="12" md="12">
+      <v-col cols="12" md="6">
         <base-card>
           <div class="text-h5 font-weight-bold mb-6 color-primary text-center">
             {{ t('membershipPage.pagniaTitle') }}
@@ -54,7 +54,7 @@
       </v-col>
 
       <!-- Neonatology Form -->
-      <v-col cols="12" md="6" v-if="hide">
+      <v-col cols="12" md="6">
         <base-card>
           <div class="text-h5 font-weight-bold mb-6 color-primary text-center">
             {{ t('membershipPage.neonatologyTitle') }}

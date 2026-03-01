@@ -168,11 +168,9 @@ async function handleSubmit() {
 <template>
   <base-container>
     <!-- Title Section -->
-    <small-card class="mt-10 mb-8 pa-0 overflow-hidden">
-      <div class="hero-header pa-4 text-center">
-        <h1 class="text-h4 font-weight-bold text-white">{{ t('workshopPage.title') }}</h1>
-      </div>
-    </small-card>
+    <v-card rounded="xl" class="mb-5 pa-2 text-center hero-header">
+      <v-card-text class="text-h5 font-weight-bold text-white">{{ t('workshopPage.title') }}</v-card-text>
+    </v-card>
 
     <!-- Info Content Section -->
     <small-card class="pa-6 mb-8">
