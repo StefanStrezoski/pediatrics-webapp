@@ -42,7 +42,7 @@ const categories = computed(() => {
 
     let title = t(`programPage.workshops.${cat.key}`);
     if (isFull) {
-      const fullText = t('workshopPage.note').split('<br />')[0].replace('<b>НАПОМЕНА:</b> ', '').trim();
+      const fullText = t('workshopPage.noteFilled');
       title += ` (${fullText})`;
     }
 
@@ -117,8 +117,8 @@ async function handleSubmit() {
       return;
     }
 
-    if (currentSubs >= SUBMISSION_LIMIT) {
-      message.value = t('workshopPage.note').split('<br />')[0].replace('<b>НАПОМЕНА:</b> ', '').trim();
+    if (currentSubs.length >= SUBMISSION_LIMIT) {
+      message.value = t('workshopPage.noteFilled');
       await fetchSubmissionCounts(); // Refresh UI
       loading.value = false;
       return;

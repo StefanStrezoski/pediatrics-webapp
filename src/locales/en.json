@@ -4,11 +4,11 @@
     "symposium": "About us",
     "abstracts": "Abstracts",
     "program": "Program",
-    "workshop": "Workshops",
+    "workshop": "Professional Meetings",
     "fees": "Registration",
     "organization": "Committee",
     "accommodations": "Accommodation",
-    "workshopRegistration": "Workshop Registration",
+    "workshopRegistration": "Professional Meeting Registration",
     "signup": "Register"
   },
   "navtitle": {
@@ -263,11 +263,11 @@
       "sunday": "SUNDAY, MAY 10, 2026"
     },
     "workshops": {
-      "title": "WORKSHOPS",
-      "w1": "Workshop 1: Autism Screening: Using the M-CHAT R/F Tool in Early Childhood",
-      "w2": "Workshop 2: PRIMARY NEONATAL RESUSCITATION",
-      "w3": "Workshop 3: HEALTHCARE LEADERSHIP",
-      "w4": "Workshop 4: ABDOMINAL ULTRASONOGRAPHY"
+      "title": "PROFESSIONAL MEETINGS",
+      "w1": "Professional Meeting 1: Autism Screening: Using the M-CHAT R/F Tool in Early Childhood",
+      "w2": "Professional Meeting 2: PRIMARY NEONATAL RESUSCITATION",
+      "w3": "Professional Meeting 3: HEALTHCARE LEADERSHIP",
+      "w4": "Professional Meeting 4: ABDOMINAL ULTRASONOGRAPHY"
     },
     "sessions": {
       "title": "PROFESSIONAL SESSIONS",
@@ -285,32 +285,32 @@
     }
   },
   "workshopPage": {
-    "title": "WORKSHOP REGISTRATION",
+    "title": "Professional Meetings",
     "intro": "Dear colleagues, collaborators and dear friends,",
-    "p1": "It is my exceptional honor and pleasure to invite you to the planned Workshops which are part of the Congress with international participation organized by PAGNIA and ZNRM titled \"Multidisciplinary approach for healthy childhood - our common care from day one\"",
-    "p2": "Each workshop will be separately accredited and has an appropriate number of points obtained from the Medical Chamber of RS Macedonia.",
-    "p3": "Due to limited space and the use of appropriate medical equipment during the workshops, please register your participation in time.",
-    "p4": "The number of participants per workshop is limited to a maximum of 30 participants, and applications will be accepted until the approved number of participants is filled.",
-    "p5": "The principle of registration for workshop participation is {action}.",
+    "p1": "It is my great honor and pleasure to invite you to the planned Accredited PROFESSIONAL EDUCATIVE MEETINGS, which are part of the Congress with international participation organized by PAGNIA and ZNRM titled \"Multidisciplinary approach for healthy childhood - our common care from day one\"",
+    "p2": "Each PROFESSIONAL EDUCATIVE MEETING will be separately accredited with an appropriate number of points obtained from the Medical Chamber of the Republic of North Macedonia.",
+    "p3": "Due to limited space and the use of appropriate medical equipment during the educational meetings, please register your participation in a timely manner.",
+    "p4": "The number of participants for one educational meeting is limited to a maximum of 30 participants, and registrations will be accepted until the approved number of participants is reached.",
+    "p5": "The principle for registration for participation in the educational meetings is FIRST COME, FIRST SERVED.",
     "firstCome": "FIRST COME, FIRST SERVED",
-    "p6": "Based on your initially accepted application for one or more Workshops, you will receive a notification from Global Net Adv that you should pay the Pro-forma Invoice for Early Registration and the calculation for the total number of registered workshops, or only for Participation in the total number of workshops without participation in the Congress.",
-    "p7": "By delivering the payment, Global Net Adv will issue you a Confirmation of your participation in the Congress and the registered workshops.",
+    "p6": "Based on your initially accepted application for one or more PROFESSIONAL EDUCATIVE MEETINGS, you will receive a notification from Global Net Adv that you should pay the Pro-forma Invoice for the Registration Fee for participation in the Congress and for the total number of registered educational meetings, or only for participation in the educational meetings without participating in the Congress.",
+    "p7": "With the submission of the payment, Global Net Adv will issue you a Confirmation of your participation in the Congress and the registered professional educational meetings.",
     "table": {
-      "title": "WORKSHOP PARTICIPATION PRICES",
+      "title": "PARTICIPATION PRICES FOR PROFESSIONAL MEETINGS",
       "headers": {
         "type": "Participant Type",
-        "price": "PARTICIPATION PRICES FOR 1 (ONE) ACCREDITED WORKSHOP"
+        "price": "PARTICIPATION PRICES FOR 1 (ONE) ACCREDITED PROFESSIONAL MEETING"
       },
       "row1": "Members of Associations PAGNIA and/or ZNM Payment for EARLY REGISTRATION and",
-      "row1_price": "+ 1,550 MKD \n (25 €)",
+      "row1_price": "+ 1,600 MKD \n (25 €)",
       "row2": "OTHER PARTICIPANTS Payment for EARLY REGISTRATION and",
       "row2_price": "+ 2,170 MKD \n (35 €)",
       "row3": "RESIDENTS AND STUDENTS Payment for EARLY REGISTRATION and",
       "row3_price": "+ 1,250 MKD \n (20 €)",
-      "row4": "PARTICIPATION ONLY IN A WORKSHOP, WITHOUT PARTICIPATION IN THE CONGRESS",
+      "row4": "PARTICIPATION ONLY IN A PROFESSIONAL MEETING, WITHOUT PARTICIPATION IN THE CONGRESS",
       "row4_price": "3,100 MKD \n (50 €)"
     },
-    "formTitle": "Your registration for participation in one or more workshops should be done here:",
+    "formTitle": "Your registration for participation in one or more professional meetings should be done here:",
     "labels": {
       "firstName": "First Name",
       "lastName": "Last Name",
@@ -321,8 +321,8 @@
       "category": "Category",
       "submit": "Confirm"
     },
-    "note": "<b>NOTE:</b> If you cannot register for any of the attached workshops, it means that the maximum number of participants allowed has been reached. <br /> For additional information, feel free to contact the Global Net Adv agency, at the following telephone numbers: <br /> <b>071/317-377</b> Marjan Dimeski or <b>070/392-638</b> Lara Veleveska",
-    "noteFilled": "If you cannot register for any of the attached workshops, it means that the maximum number of participants allowed has been reached.",
+    "note": "<b>NOTE:</b> If you cannot register for any of the attached professional meetings, it means that the maximum number of participants allowed has been reached. <br /> For additional information, feel free to contact the Global Net Adv agency, at the following telephone numbers: <br /> <b>071/317-377</b> Marjan Dimeski or <b>070/392-638</b> Lara Veleveska",
+    "noteFilled": "If you cannot register for any of the attached professional meetings, it means that the maximum number of participants allowed has been reached.",
     "phoneMarjan": "071/317-377",
     "phoneLara": "070/392-638"
   },
