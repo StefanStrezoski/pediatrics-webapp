@@ -24,6 +24,7 @@
   "intro": "Dear colleagues, dear friends and collaborators,",
   "underConstruction": "UNDER CONSTRUCTION",
   "required": "Required field",
+  "invalidEmail": "Please enter a valid e-mail",
   "errorMsg": "Fill in all required fields",
   "selectFile": "Select file",
   "symposiumPage": {
@@ -213,6 +214,7 @@
       "submitLabel": "Submit"
     },
     "required": "This field is required",
+    "invalidEmail": "Please enter a valid e-mail",
     "invalidPhone": "Please enter a valid phone number",
     "errorMsg": "Please fill in all required fields correctly",
     "selectFile": "Please select an image to upload",

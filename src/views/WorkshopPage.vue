@@ -82,7 +82,7 @@ const rules = {
   required: value => !!value || t('required'),
   email: value => {
     const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return pattern.test(value) || t('feesPage.invalidPhone'); // Reusing some error msg if possible or just defining new
+    return pattern.test(value) || t('feesPage.invalidEmail'); // Fixed to use invalidEmail
   },
 };
 
@@ -106,9 +106,9 @@ async function handleSubmit() {
     }
 
     // Re-verify count before final submission
-    const { data: currentSubs, error: countError } = await supabase
-      .from('workshop_submissions_pagnia') // Correcting table name if needed
-      .select('id', { count: 'exact', head: true })
+    const { count, error: countError } = await supabase
+      .from('workshop_submissions_pagnia')
+      .select('*', { count: 'exact', head: true })
       .eq('category', formData.value.category);
 
     if (countError) {
@@ -116,8 +116,9 @@ async function handleSubmit() {
       loading.value = false;
       return;
     }
+    console.log(count);
 
-    if (currentSubs.length >= SUBMISSION_LIMIT) {
+    if (count >= SUBMISSION_LIMIT) {
       message.value = t('workshopPage.noteFilled');
       await fetchSubmissionCounts(); // Refresh UI
       loading.value = false;
