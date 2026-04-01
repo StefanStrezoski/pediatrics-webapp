@@ -31,7 +31,8 @@ const categoriesData = [
   { key: 'w1', value: 'Skrining za autizam' },
   { key: 'w2', value: 'Primarna reanimacija na novoroden' },
   { key: 'w3', value: 'Liderstvo vo zdravstvo' },
-  { key: 'w4', value: 'Ultrazvucna na abdomen' }
+  { key: 'w4', value: 'Ultrazvucna na abdomen' },
+  { key: 'w5', value: 'Endoskopija so simulacija' }
 ];
 
 const categories = computed(() => {

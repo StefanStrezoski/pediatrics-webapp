@@ -28,7 +28,7 @@ const { t } = useI18n();
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.workshops.title') }}</span>
       </div>
       <v-list density="comfortable" class="text-left">
-        <v-list-item v-for="i in 4" :key="'w' + i">
+        <v-list-item v-for="i in 5" :key="'w' + i">
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="primary" />
           </template>
