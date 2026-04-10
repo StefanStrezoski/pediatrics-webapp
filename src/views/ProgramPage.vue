@@ -1,9 +1,13 @@
 <script setup>
 import BaseContainer from "@/components/BaseContainer.vue";
 import BaseCard from "@/components/BaseCard.vue";
+import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
+
+const embedCode = ref(`
+<iframe style="width:100%;height:600px" src="https://online.anyflip.com/ujmxk/pkib/index.html"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>`)
 </script>
 
 <template>
@@ -120,6 +124,10 @@ const { t } = useI18n();
           {{ t('programPage.poster.desc') }}
         </div>
       </v-card-text>
+    </base-card>
+
+    <base-card>
+      <div v-html="embedCode"></div>
     </base-card>
   </base-container>
 </template>
