@@ -21,11 +21,11 @@ const router = createRouter({
       name: 'SymposiumPage',
       component: SymposiumPage
     },
-    {
-      path: '/abstracts',
-      name: 'AbstractPage',
-      component: AbstractPage
-    },
+    // {
+    //   path: '/abstracts',
+    //   name: 'AbstractPage',
+    //   component: AbstractPage
+    // },
     {
       path: '/program',
       name: 'ProgramPage',

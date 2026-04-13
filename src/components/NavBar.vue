@@ -87,7 +87,7 @@ const tabs = [
   { label: 'tabs.about', icon: 'mdi-information-outline', route: 'AboutPage' },
   { label: 'tabs.symposium', icon: 'mdi-chair-school', route: 'SymposiumPage' },
   { label: 'tabs.signup', icon: 'mdi-account-plus', route: 'MembershipPage' },
-  { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
+  // { label: 'tabs.abstracts', icon: 'mdi-file-document', route: 'AbstractPage' },
   { label: 'tabs.program', icon: 'mdi-calendar-clock', route: 'ProgramPage' },
   { label: 'tabs.workshop', icon: 'mdi-presentation', route: 'WorkshopPage' },
   { label: 'tabs.fees', icon: 'mdi-cash', route: 'RegistrationPage' },
