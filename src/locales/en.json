@@ -27,6 +27,11 @@
   "invalidEmail": "Please enter a valid e-mail",
   "errorMsg": "Fill in all required fields",
   "selectFile": "Select file",
+  "popup": {
+    "title": "IMPORTANT",
+    "p1": "The professional meetings are accredited by the Medical Chamber of the RNM with <span class=\"font-weight-black text-red-darken-2 text-h6\">4</span> points for listeners and <span class=\"font-weight-black text-red-darken-2 text-h6\">6</span> points for lecturers.",
+    "p2": "The Congress is accredited by the Medical Chamber of the RNM with <span class=\"font-weight-black text-red-darken-2 text-h6\">12</span> points for listeners and <span class=\"font-weight-black text-red-darken-2 text-h6\">20</span> points for lecturers."
+  },
   "symposiumPage": {
     "p1": "It is my exceptional honor on behalf of the </br> <b>Pediatric Association for Gastroenterology, Hepatology, Nutrition, Clinical Immunology and Allergology</b> to invite you to the <b>Congress with international participation organized by PAGNIA and ZNRM</b> titled <b>“Multidisciplinary approach for healthy childhood - our common care from day one”</b> which will be held from <b>May 8th to 10th, 2026 at Hotel Drim in Struga.</b>",
     "p2": "The creation of this pediatric association emerged from everyday clinical practice and the connection of important mechanisms of disease occurrence and their treatment.",

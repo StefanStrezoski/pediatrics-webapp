@@ -6,34 +6,28 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 const showPopup = ref(true);
+
+const embedCode = ref(`
+<iframe style="width:100%;height:600px" src="https://online.anyflip.com/ujmxk/qvaz/index.html"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+`)
 </script>
 
 <template>
   <base-container>
     <!-- Non-obstructive floating popup banner -->
-    <v-card 
-      v-if="showPopup" 
-      class="popup-banner pa-5 elevation-12" 
-      style="border-left: 8px solid #d32f2f;"
-    >
+    <v-card v-if="showPopup" class="popup-banner pa-5 elevation-12" style="border-left: 8px solid #d32f2f;">
       <div class="d-flex justify-space-between align-start mb-3">
         <div class="d-flex align-center">
           <v-icon icon="mdi-alert-circle" color="red-darken-2" size="32" class="mr-2"></v-icon>
-          <span class="text-h4 font-weight-black text-red-darken-2" style="letter-spacing: 1px;">ВАЖНО</span>
+          <span class="text-h4 font-weight-black text-red-darken-2" style="letter-spacing: 1px;">{{ t('popup.title')
+            }}</span>
         </div>
-        <v-btn icon="mdi-close" variant="text" density="compact" color="grey-darken-1" @click="showPopup = false"></v-btn>
+        <v-btn icon="mdi-close" variant="text" density="compact" color="grey-darken-1"
+          @click="showPopup = false"></v-btn>
       </div>
       <div class="text-body-1 font-weight-bold text-grey-darken-4 mt-2" style="line-height: 1.5;">
-        <p class="mb-4">
-          Стручните состаноци се Акредитирани од страна на Лекарската Комора на РСM, и тоа со 
-          <span class="font-weight-black text-red-darken-2 text-h6">4</span> бодови за слушатели и 
-          <span class="font-weight-black text-red-darken-2 text-h6">6</span> бодови за предавачите.
-        </p>
-        <p class="mb-0">
-          Конгресот е Акредитиран од страна на Лекарската Комора на РСM, и тоа со 
-          <span class="font-weight-black text-red-darken-2 text-h6">12</span> бодови за слушатели и 
-          <span class="font-weight-black text-red-darken-2 text-h6">20</span> бодови за предавачите.
-        </p>
+        <p class="mb-4" v-html="t('popup.p1')"></p>
+        <p class="mb-0" v-html="t('popup.p2')"></p>
       </div>
     </v-card>
     <div class="text-h4 font-weight-bold mb-6 text-center text-primary-dark">
@@ -41,16 +35,16 @@ const showPopup = ref(true);
     </div>
 
     <!-- Friday -->
-    <v-row class="mb-4">
+    <!-- <v-row class="mb-4">
       <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.friday') }}
         </div>
       </v-col>
-    </v-row>
+    </v-row> -->
 
     <!-- Workshops -->
-    <base-card class="mb-6 elevation-2 overflow-hidden">
+    <!-- <base-card class="mb-6 elevation-2 overflow-hidden">
       <div class="category-header pa-3 px-6">
         <v-icon icon="mdi-presentation" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.workshops.title') }}</span>
@@ -60,15 +54,15 @@ const showPopup = ref(true);
           <template v-slot:prepend>
             <v-icon icon="mdi-circle-small" color="primary" />
           </template>
-          <v-list-item-title class="text-wrap">
-            {{ t(`programPage.workshops.w${i}`) }}
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </base-card>
+<v-list-item-title class="text-wrap">
+  {{ t(`programPage.workshops.w${i}`) }}
+</v-list-item-title>
+</v-list-item>
+</v-list>
+</base-card> -->
 
     <!-- Session 1 -->
-    <base-card class="mb-8 elevation-2 overflow-hidden">
+    <!-- <base-card class="mb-8 elevation-2 overflow-hidden">
       <div class="category-header pa-3 px-6 secondary">
         <v-icon icon="mdi-account-group" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.sessions.title') }}</span>
@@ -83,10 +77,10 @@ const showPopup = ref(true);
           </v-list-item-title>
         </v-list-item>
       </v-list>
-    </base-card>
+    </base-card> -->
 
     <!-- Saturday -->
-    <v-row class="mb-4">
+    <!-- <v-row class="mb-4">
       <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.saturday') }}
@@ -109,10 +103,10 @@ const showPopup = ref(true);
           </v-list-item-title>
         </v-list-item>
       </v-list>
-    </base-card>
+    </base-card> -->
 
     <!-- Sunday -->
-    <v-row class="mb-4">
+    <!-- <v-row class="mb-4">
       <v-col cols="12" class="text-center">
         <div class="text-h5 font-weight-bold mb-3 day-header">
           {{ t('programPage.days.sunday') }}
@@ -135,10 +129,10 @@ const showPopup = ref(true);
           </v-list-item-title>
         </v-list-item>
       </v-list>
-    </base-card>
+    </base-card> -->
 
     <!-- Poster Session -->
-    <base-card class="mb-12 elevation-2 overflow-hidden accent-card">
+    <!-- <base-card class="mb-12 elevation-2 overflow-hidden accent-card">
       <div class="category-header pa-3 px-6 accent">
         <v-icon icon="mdi-file-presentation-box" color="white" class="mr-2" />
         <span class="text-h6 font-weight-bold text-white">{{ t('programPage.poster.title') }}</span>
@@ -148,6 +142,10 @@ const showPopup = ref(true);
           {{ t('programPage.poster.desc') }}
         </div>
       </v-card-text>
+    </base-card> -->
+
+    <base-card>
+      <div v-html="embedCode"></div>
     </base-card>
   </base-container>
 </template>
